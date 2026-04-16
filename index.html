@@ -17,11 +17,11 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;paddi
 .badge{display:inline-block;background:#ecfeff;color:var(--accent);border-radius:999px;padding:.35rem .7rem;font-weight:700;font-size:.88rem;margin-bottom:1rem}
 h1{margin:0 0 .35rem;font-size:clamp(2.2rem,5vw,3.7rem);line-height:1.05}.sub{margin:0;color:var(--muted);font-size:1.06rem;max-width:750px}
 .pills{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.2rem}.pill{padding:.5rem .8rem;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted)}
-.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem}.btn{padding:.82rem 1.05rem;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--text);font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.hero-top{display:grid;grid-template-columns:160px 1fr;gap:1.5rem;align-items:center}.profile-wrap{display:flex;justify-content:center}.profile-photo{width:160px;height:160px;border-radius:50%;border:1px solid var(--line);background:linear-gradient(135deg,#ffffff,#e6fffb);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.95rem;text-align:center;padding:1rem;overflow:hidden}.profile-photo img{width:100%;height:100%;object-fit:cover;display:block}.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem}.btn{padding:.82rem 1.05rem;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--text);font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}.icon-link{display:inline-flex;align-items:center;gap:.5rem}.icon-link svg{width:18px;height:18px;flex:0 0 18px}
 main{padding-bottom:3rem} section{margin-top:1rem} h2{margin:0 0 .8rem;font-size:1.35rem} h3{margin:.2rem 0 .65rem;font-size:1.05rem}
 .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.item+.item{margin-top:.95rem;padding-top:.95rem;border-top:1px solid var(--line)} .title{font-weight:700}.small{color:var(--muted);font-size:.95rem}
 ul{margin:.45rem 0 0;padding-left:1.15rem} footer{padding:1rem 0 3rem;color:var(--muted);font-size:.92rem}
-@media (max-width:860px){nav{flex-direction:column;align-items:flex-start}.grid2{grid-template-columns:1fr}.hero-card,.card{padding:1.15rem}}
+@media (max-width:860px){nav{flex-direction:column;align-items:flex-start}.grid2{grid-template-columns:1fr}.hero-top{grid-template-columns:1fr}.profile-wrap{justify-content:flex-start}.hero-card,.card{padding:1.15rem}}
 </style>
 </head>
 <body>
@@ -38,17 +38,40 @@ ul{margin:.45rem 0 0;padding-left:1.15rem} footer{padding:1rem 0 3rem;color:var(
 <main class="wrap">
   <section class="hero">
     <div class="hero-card">
-      <div class="badge">Graduate Student in Computer Science</div>
-      <h1>Jaegun Lee</h1>
-      <p class="sub">M.S./Ph.D. integrated student at POSTECH, working on geometric algorithms with a focus on covering and partition problems.</p>
-      <div class="pills">
-        <div class="pill">Advisor: Hee-Kap Ahn</div>
-        <div class="pill">Email: <a href="mailto:jagunlee@postech.ac.kr">jagunlee@postech.ac.kr</a></div>
-        <div class="pill">Location: Pohang, Republic of Korea</div>
-      </div>
-      <div class="actions">
-        <a class="btn primary" href="#publications">View Publications</a>
-        <a class="btn" href="cv2023.pdf" target="_blank">Download CV</a>
+      <div class="hero-top">
+        <div class="profile-wrap">
+          <div class="profile-photo">
+            <img src="jaegun.jpg" alt="Jaegun Lee">
+            <span>Photo<br>Placeholder</span>
+          </div>
+        </div>
+        <div>
+          <div class="badge">Graduate Student in Computer Science</div>
+          <h1>Jaegun Lee</h1>
+          <p class="sub">M.S./Ph.D. integrated student at POSTECH, working on geometric algorithms with a focus on covering and partition problems.</p>
+          <div class="pills">
+            <div class="pill">Advisor: Hee-Kap Ahn</div>
+            <div class="pill">Email: <a href="mailto:jagunlee@postech.ac.kr">jagunlee@postech.ac.kr</a></div>
+            <div class="pill">Location: Pohang, Republic of Korea</div>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="#publications">View Publications</a>
+            <a class="btn" href="cv2023.pdf" target="_blank" rel="noopener">Download CV</a>
+            <a class="btn icon-link" href="" target="_blank" rel="noopener" aria-label="Google Scholar link">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm-7 9.18V16c0 2.76 3.13 5 7 5s7-2.24 7-5v-3.82l-7 3.82-7-3.82Z"/></svg>
+              <span>Google Scholar</span>
+            </a>
+            <a class="btn icon-link" href="" target="_blank" rel="noopener" aria-label="DBLP link">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 4h9a4 4 0 0 1 0 8H9v8H5V4Zm4 4h5a2 2 0 0 0 0-4H9v4Zm4 4h2.5A4.5 4.5 0 0 1 20 16.5A4.5 4.5 0 0 1 15.5 21H9v-9h4Zm0 5h2.5a.5.5 0 0 0 .5-.5.5.5 0 0 0-.5-.5H13v1Z"/></svg>
+              <span>DBLP</span>
+            </a>
+            <a class="btn icon-link" href="" target="_blank" rel="noopener" aria-label="GitHub link">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.21.68-.48v-1.67c-2.78.61-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.46-1.11-1.46-.9-.62.07-.61.07-.61 1 .07 1.52 1.03 1.52 1.03.88 1.51 2.31 1.07 2.87.82.09-.64.35-1.07.63-1.31-2.22-.25-4.55-1.11-4.55-4.92 0-1.09.39-1.99 1.03-2.7-.1-.25-.45-1.28.1-2.66 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.51.32 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.41.1 2.66.64.71 1.03 1.61 1.03 2.7 0 3.82-2.33 4.66-4.56 4.91.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+          <p class="small" style="margin-top:.8rem">각 링크의 <code>href=""</code> 부분에 직접 URL만 넣으면 됩니다. 사진은 <code>photo.jpg</code> 파일을 같은 폴더에 두고 주석을 해제하면 바로 표시됩니다.</p>
+        </div>
       </div>
     </div>
   </section>
