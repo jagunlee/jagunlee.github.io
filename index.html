@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaegun Lee</title>
+<style>
+:root{--bg:#f8fafc;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--accent:#0f766e;--max:1050px}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{width:min(calc(100% - 2rem),var(--max));margin:0 auto}
+header{position:sticky;top:0;background:rgba(248,250,252,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem 0}.brand{font-weight:800}.links{display:flex;flex-wrap:wrap;gap:1rem;font-size:.95rem}
+.hero{padding:4rem 0 1.25rem}.hero-card,.card{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:0 8px 20px rgba(15,23,42,.03)}
+.hero-card{padding:2rem;background:linear-gradient(135deg,#fff,#f0fdfa)} .card{padding:1.3rem}
+.badge{display:inline-block;background:#ecfeff;color:var(--accent);border-radius:999px;padding:.35rem .7rem;font-weight:700;font-size:.88rem;margin-bottom:1rem}
+h1{margin:0 0 .35rem;font-size:clamp(2.2rem,5vw,3.7rem);line-height:1.05}.sub{margin:0;color:var(--muted);font-size:1.06rem;max-width:750px}
+.pills{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.2rem}.pill{padding:.5rem .8rem;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted)}
+.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem}.btn{padding:.82rem 1.05rem;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--text);font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+main{padding-bottom:3rem} section{margin-top:1rem} h2{margin:0 0 .8rem;font-size:1.35rem} h3{margin:.2rem 0 .65rem;font-size:1.05rem}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.item+.item{margin-top:.95rem;padding-top:.95rem;border-top:1px solid var(--line)} .title{font-weight:700}.small{color:var(--muted);font-size:.95rem}
+ul{margin:.45rem 0 0;padding-left:1.15rem} footer{padding:1rem 0 3rem;color:var(--muted);font-size:.92rem}
+@media (max-width:860px){nav{flex-direction:column;align-items:flex-start}.grid2{grid-template-columns:1fr}.hero-card,.card{padding:1.15rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="brand">Jaegun Lee</div>
+      <div class="links">
+        <a href="#about">About</a><a href="#research">Research</a><a href="#education">Education</a><a href="#publications">Publications</a><a href="#activities">Activities</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div class="hero-card">
+      <div class="badge">Graduate Student in Computer Science</div>
+      <h1>Jaegun Lee</h1>
+      <p class="sub">M.S./Ph.D. integrated student at POSTECH, working on geometric algorithms with a focus on covering and partition problems.</p>
+      <div class="pills">
+        <div class="pill">Advisor: Hee-Kap Ahn</div>
+        <div class="pill">Email: <a href="mailto:jagunlee@postech.ac.kr">jagunlee@postech.ac.kr</a></div>
+        <div class="pill">Location: Pohang, Republic of Korea</div>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="#publications">View Publications</a>
+        <a class="btn" href="cv2023.pdf" target="_blank">Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about"><div class="card"><h2>About</h2>
+    <p>I am a graduate student in the Department of Computer Science and Engineering at Pohang University of Science and Technology (POSTECH). My work centers on geometric algorithms, especially covering and partition problems. Recently, I have been studying strip-based covering and classification problems, color-spanning structures, and triangulation-related questions.</p>
+  </div></section>
+
+  <section id="research"><div class="card"><h2>Research Interests</h2>
+    <ul>
+      <li>Geometric Algorithms</li>
+      <li>Partitioning and Covering</li>
+      <li>Bichromatic and color-spanning geometric optimization</li>
+      <li>Triangulation and related combinatorial geometry problems</li>
+    </ul>
+  </div></section>
+
+  <section id="education"><div class="card"><h2>Education</h2>
+    <div class="item"><div class="title">Pohang University of Science and Technology</div><div>M.S./Ph.D. (Integrated) in Computer Science and Engineering, 2022 – present</div><div class="small">Advisor: Hee-Kap Ahn · GPA: 4.04/4.3</div></div>
+    <div class="item"><div class="title">Pohang University of Science and Technology</div><div>B.S. in Creative IT Engineering &amp; Mathematics, 2017 – 2022</div><div class="small">GPA: 3.81/4.3 (Cum Laude)</div></div>
+  </div></section>
+
+  <section id="publications"><div class="card"><h2>Publications</h2>
+    <div class="grid2">
+      <div>
+        <h3>Journal</h3>
+        <div class="item"><div class="title">Uniformly monotone partitioning of polygons</div><div class="small">Hwi Kim, Jaegun Lee, Hee-Kap Ahn · Theoretical Computer Science · 2024</div></div>
+        <div class="item"><div class="title">Rectangular Partitions of a Rectilinear Polygon</div><div class="small">Hwi Kim, Jaegun Lee, Hee-Kap Ahn · Computational Geometry · 2023</div></div>
+      </div>
+      <div>
+        <h3>Conference</h3>
+        <div class="item"><div class="title">Bichromatic Classifications using Strips</div><div class="small">Jaegun Lee, Chaeyoon Chung, Hee-Kap Ahn · SWAT 2026 · 2026</div></div>
+        <div class="item"><div class="title">CG#Hunters Approach to Central Triangulation Under Parallel Flip Operations</div><div class="small">Jaegun Lee, Seokyun Kang, Hyeonseok Lee, Hyeyun Yang, Taehoon Ahn · SoCG 2026 · 2026</div></div>
+        <div class="item"><div class="title">Covering Weighted Points using Unit Squares</div><div class="small">Chaeyoon Chung, Jaegun Lee, Hee-Kap Ahn · ISAAC 2025 · 2025</div></div>
+        <div class="item"><div class="title">Monotone Partitions of Simple Polygons</div><div class="small">Jaegun Lee, Hyojeong An, Hwi Kim, Hee-Kap Ahn · IWOCA 2025 · 2025</div></div>
+        <div class="item"><div class="title">Incremental algorithm and local search for minimum non-obtuse triangulation</div><div class="small">Taehoon Ahn, Jaegun Lee, Byeonguk Kang, Hwi Kim · SoCG 2025 · 2025</div></div>
+        <div class="item"><div class="title">Efficient k-center algorithms for planar points in convex position</div><div class="small">Jongmin Choi, Jaegun Lee, Hee-Kap Ahn · WADS 2023 · 2023</div></div>
+        <div class="item"><div class="title">Uniformly Monotone Partitioning of Polygons Revisited</div><div class="small">Hwi Kim, Jaegun Lee, Hee-Kap Ahn · CCCG 2022 · 2022</div></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section><div class="grid2">
+    <div class="card"><h2>Talks</h2>
+      <div class="item"><div class="title">Bichromatic Classifications using Strips</div><div class="small">AAAC 2026 · 2026</div></div>
+      <div class="item"><div class="title">Monotone Partitions of Simple Polygons</div><div class="small">AAAC 2025 · 2025</div></div>
+      <div class="item"><div class="title">Efficient k-center algorithms for planar points in convex position</div><div class="small">WAAC 2023 · 2023</div></div>
+    </div>
+    <div class="card"><h2>Scholarships &amp; Awards</h2>
+      <ul>
+        <li>Third Place at CG:SHOP SoCG Competition (2026)</li>
+        <li>Second Place &amp; First Place in Junior at CG:SHOP SoCG Competition (2025)</li>
+        <li>Bang Sung-Yang Graduate Fellowship (2022)</li>
+      </ul>
+    </div>
+  </div></section>
+
+  <section><div class="grid2">
+    <div class="card"><h2>Projects</h2>
+      <div class="item"><div class="title">Auto Nesting</div><div class="small">By Samsung Heavy Industries · 2025–2026</div></div>
+      <div class="item"><div class="title">Slab Yard Optimization</div><div class="small">By POSCO DX · Team Leader · 2023–2024</div></div>
+      <div class="item"><div class="title">Software Star Lab (Optimal Data Structure and Algorithmic Applications in Dynamic Geometric Environment)</div><div class="small">2022–2025</div></div>
+    </div>
+    <div class="card"><h2>Patents</h2>
+      <div class="item"><div class="title">Slab Transfer System Using Virtual Slab Yard Simulator</div><div class="small">Korean Patent (Application), 10-2024-0201787 · 2024</div></div>
+      <div class="item"><div class="title">Efficient Optimal Facility Location Determination Methods for Convex Position Demand Points</div><div class="small">Korean Patent, 10-2704974 · 2024</div></div>
+      <div class="item"><div class="title">Efficient Optimal Facility Location Determination Methods for Convex Position Demand Points</div><div class="small">US Patent (Application), 18/496700 · 2023</div></div>
+      <div class="item"><div class="title">METHOD AND APPARATUS FOR CLASSIFYING IMAGE</div><div class="small">US Patent, 11657594 · 2023 / Korean Patent, 1021590520000 · 2020</div></div>
+    </div>
+  </div></section>
+
+  <section id="activities"><div class="grid2">
+    <div class="card"><h2>Academic Activities</h2>
+      <div class="item"><div class="title">Conference Organization</div><ul><li>WAAC 2026 · 2026</li><li>KWCG 2026 · 2025</li></ul></div>
+      <div class="item"><div class="title">Reviewer</div><ul><li>CGTA · 2024</li><li>STACS · 2025</li><li>WALCOM · 2025</li><li>SoCG · 2024</li><li>TAMC · 2024</li><li>ISAAC · 2023</li></ul></div>
+      <div class="item"><div class="title">Educational Activities</div><ul><li>POSCO AI Expert · 2022</li><li>Youth AI·Bigdata Academy · 2022.6, 2022.12, 2023, 2024.2, 2024.8, 2025.4</li><li>HuStar Innovation Academy · 2022</li><li>POSTECH CSED331 Algorithms TA · 2022, 2023</li><li>Pohang Jecheol High School Advanced Thinking Program TA · 2022</li></ul></div>
+    </div>
+    <div class="card"><h2>Extra Activities</h2>
+      <div class="item"><div class="title">Lab Activities</div><ul><li>KWCG 2025 Local Organizer · 2025</li><li>Lab Manager · 2025–2026</li></ul></div>
+      <div class="item"><div class="title">Work Experience</div><ul><li>Polaris3D · Developer (Out-of-stock Detection Model, demo at CES 2020) · 2019–2020</li></ul></div>
+      <div class="item"><div class="title">Student &amp; Club Activities</div><ul><li>Student Council of Department · 2018</li><li>Adlib (drama club) · 2017–2022, President in 2019</li><li>Tachyons (baseball club) · 2017–present</li></ul></div>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="card"><h2>Contact</h2>
+    <p>Email: <a href="mailto:jagunlee@postech.ac.kr">jagunlee@postech.ac.kr</a><br>Affiliation: Department of Computer Science and Engineering, POSTECH</p>
+    <p class="small">This public-site version intentionally omits the full street address for privacy.</p>
+  </div></section>
+</main>
+<footer class="wrap">Built from CV information. Add paper links, slides, Google Scholar, DBLP, or GitHub repositories as your next step.</footer>
+</body>
+</html>
