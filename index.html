@@ -17,7 +17,7 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;paddi
 .badge{display:inline-block;background:#ecfeff;color:var(--accent);border-radius:999px;padding:.35rem .7rem;font-weight:700;font-size:.88rem;margin-bottom:1rem}
 h1{margin:0 0 .35rem;font-size:clamp(2.2rem,5vw,3.7rem);line-height:1.05}.sub{margin:0;color:var(--muted);font-size:1.06rem;max-width:750px}
 .pills{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.2rem}.pill{padding:.5rem .8rem;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted)}
-.hero-top{display:grid;grid-template-columns:160px 1fr;gap:1.5rem;align-items:center}.profile-wrap{display:flex;justify-content:center}.profile-photo{width:160px;height:160px;border-radius:50%;border:1px solid var(--line);background:linear-gradient(135deg,#ffffff,#e6fffb);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.95rem;text-align:center;padding:1rem;overflow:hidden}.profile-photo img{width:100%;height:100%;object-fit:cover;display:block}.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem}.btn{padding:.82rem 1.05rem;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--text);font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}.icon-link{display:inline-flex;align-items:center;gap:.5rem}.icon-link svg{width:18px;height:18px;flex:0 0 18px}
+.hero-top{display:grid;grid-template-columns:160px 1fr;gap:1.5rem;align-items:center}.profile-wrap{display:flex;justify-content:center}.profile-photo{width:172px;height:172px;border-radius:50%;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.95rem;text-align:center;overflow:hidden;box-shadow:0 8px 24px rgba(17,24,39,.08)}.profile-photo img{width:100%;height:100%;object-fit:cover;display:block}.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem}.btn{padding:.82rem 1.05rem;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--text);font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}.icon-link{display:inline-flex;align-items:center;gap:.5rem}.icon-link svg{width:18px;height:18px;flex:0 0 18px}
 main{padding-bottom:3rem} section{margin-top:1rem} h2{margin:0 0 .8rem;font-size:1.35rem} h3{margin:.2rem 0 .65rem;font-size:1.05rem}
 .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.item+.item{margin-top:.95rem;padding-top:.95rem;border-top:1px solid var(--line)} .title{font-weight:700}.small{color:var(--muted);font-size:.95rem}
 ul{margin:.45rem 0 0;padding-left:1.15rem} footer{padding:1rem 0 3rem;color:var(--muted);font-size:.92rem}
@@ -41,8 +41,7 @@ ul{margin:.45rem 0 0;padding-left:1.15rem} footer{padding:1rem 0 3rem;color:var(
       <div class="hero-top">
         <div class="profile-wrap">
           <div class="profile-photo">
-            <img src="jaegun.jpg" alt="Jaegun Lee">
-            <span>Photo<br>Placeholder</span>
+            <img src="profile_square.jpg" alt="Jaegun Lee">
           </div>
         </div>
         <div>
@@ -50,27 +49,27 @@ ul{margin:.45rem 0 0;padding-left:1.15rem} footer{padding:1rem 0 3rem;color:var(
           <h1>Jaegun Lee</h1>
           <p class="sub">M.S./Ph.D. integrated student at POSTECH, working on geometric algorithms with a focus on covering and partition problems.</p>
           <div class="pills">
-            <div class="pill">Advisor: Hee-Kap Ahn</div>
+            <div class="pill">Advisor: <a href="https://heekap.github.io">Hee-Kap Ahn</a></div>
             <div class="pill">Email: <a href="mailto:jagunlee@postech.ac.kr">jagunlee@postech.ac.kr</a></div>
             <div class="pill">Location: Pohang, Republic of Korea</div>
           </div>
           <div class="actions">
             <a class="btn primary" href="#publications">View Publications</a>
             <a class="btn" href="cv2023.pdf" target="_blank" rel="noopener">Download CV</a>
-            <a class="btn icon-link" href="" target="_blank" rel="noopener" aria-label="Google Scholar link">
+            <!-- <a class="btn icon-link" href="" target="_blank" rel="noopener" aria-label="Google Scholar link">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm-7 9.18V16c0 2.76 3.13 5 7 5s7-2.24 7-5v-3.82l-7 3.82-7-3.82Z"/></svg>
               <span>Google Scholar</span>
-            </a>
-            <a class="btn icon-link" href="" target="_blank" rel="noopener" aria-label="DBLP link">
+            </a> -->
+            <a class="btn icon-link" href="https://dblp.org/pid/305/4109.html" target="_blank" rel="noopener" aria-label="DBLP link">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 4h9a4 4 0 0 1 0 8H9v8H5V4Zm4 4h5a2 2 0 0 0 0-4H9v4Zm4 4h2.5A4.5 4.5 0 0 1 20 16.5A4.5 4.5 0 0 1 15.5 21H9v-9h4Zm0 5h2.5a.5.5 0 0 0 .5-.5.5.5 0 0 0-.5-.5H13v1Z"/></svg>
               <span>DBLP</span>
             </a>
-            <a class="btn icon-link" href="" target="_blank" rel="noopener" aria-label="GitHub link">
+            <!-- <a class="btn icon-link" href="https://github.com/jagunlee" target="_blank" rel="noopener" aria-label="GitHub link">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.21.68-.48v-1.67c-2.78.61-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.46-1.11-1.46-.9-.62.07-.61.07-.61 1 .07 1.52 1.03 1.52 1.03.88 1.51 2.31 1.07 2.87.82.09-.64.35-1.07.63-1.31-2.22-.25-4.55-1.11-4.55-4.92 0-1.09.39-1.99 1.03-2.7-.1-.25-.45-1.28.1-2.66 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.51.32 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.41.1 2.66.64.71 1.03 1.61 1.03 2.7 0 3.82-2.33 4.66-4.56 4.91.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
               <span>GitHub</span>
-            </a>
+            </a> -->
           </div>
-          <p class="small" style="margin-top:.8rem">각 링크의 <code>href=""</code> 부분에 직접 URL만 넣으면 됩니다. 사진은 <code>photo.jpg</code> 파일을 같은 폴더에 두고 주석을 해제하면 바로 표시됩니다.</p>
+          <!-- <p class="small" style="margin-top:.8rem">각 링크의 <code>href=""</code> 부분에 직접 URL만 넣으면 됩니다. 사진은 현재 업로드한 이미지 기준으로 원형에 맞게 미리 정사각 크롭해 둔 <code>profile_square.jpg</code>를 사용하도록 설정했습니다.</p> -->
         </div>
       </div>
     </div>
@@ -82,10 +81,10 @@ ul{margin:.45rem 0 0;padding-left:1.15rem} footer{padding:1rem 0 3rem;color:var(
 
   <section id="research"><div class="card"><h2>Research Interests</h2>
     <ul>
-      <li>Geometric Algorithms</li>
+      <!-- <li>Geometric Algorithms</li> -->
       <li>Partitioning and Covering</li>
       <li>Bichromatic and color-spanning geometric optimization</li>
-      <li>Triangulation and related combinatorial geometry problems</li>
+      <li>Optimization of NP-hard problems</li>
     </ul>
   </div></section>
 
@@ -98,33 +97,33 @@ ul{margin:.45rem 0 0;padding-left:1.15rem} footer{padding:1rem 0 3rem;color:var(
     <div class="grid2">
       <div>
         <h3>Journal</h3>
-        <div class="item"><div class="title">Uniformly monotone partitioning of polygons</div><div class="small">Hwi Kim, Jaegun Lee, Hee-Kap Ahn · Theoretical Computer Science · 2024</div></div>
-        <div class="item"><div class="title">Rectangular Partitions of a Rectilinear Polygon</div><div class="small">Hwi Kim, Jaegun Lee, Hee-Kap Ahn · Computational Geometry · 2023</div></div>
+        <div class="item"><div class="title"><a href="https://doi.org/10.1016/j.tcs.2024.114724">Uniformly monotone partitioning of polygons</a></div><div class="small">Hwi Kim, <u>Jaegun Lee</u>, Hee-Kap Ahn · Theoretical Computer Science · 2024</div></div>
+        <div class="item"><div class="title"><a href="https://doi.org/10.1016/j.comgeo.2022.101965">Rectangular Partitions of a Rectilinear Polygon</a></div><div class="small">Hwi Kim, <u>Jaegun Lee</u>, Hee-Kap Ahn · Computational Geometry · 2023</div></div>
       </div>
       <div>
         <h3>Conference</h3>
-        <div class="item"><div class="title">Bichromatic Classifications using Strips</div><div class="small">Jaegun Lee, Chaeyoon Chung, Hee-Kap Ahn · SWAT 2026 · 2026</div></div>
-        <div class="item"><div class="title">CG#Hunters Approach to Central Triangulation Under Parallel Flip Operations</div><div class="small">Jaegun Lee, Seokyun Kang, Hyeonseok Lee, Hyeyun Yang, Taehoon Ahn · SoCG 2026 · 2026</div></div>
-        <div class="item"><div class="title">Covering Weighted Points using Unit Squares</div><div class="small">Chaeyoon Chung, Jaegun Lee, Hee-Kap Ahn · ISAAC 2025 · 2025</div></div>
-        <div class="item"><div class="title">Monotone Partitions of Simple Polygons</div><div class="small">Jaegun Lee, Hyojeong An, Hwi Kim, Hee-Kap Ahn · IWOCA 2025 · 2025</div></div>
-        <div class="item"><div class="title">Incremental algorithm and local search for minimum non-obtuse triangulation</div><div class="small">Taehoon Ahn, Jaegun Lee, Byeonguk Kang, Hwi Kim · SoCG 2025 · 2025</div></div>
-        <div class="item"><div class="title">Efficient k-center algorithms for planar points in convex position</div><div class="small">Jongmin Choi, Jaegun Lee, Hee-Kap Ahn · WADS 2023 · 2023</div></div>
-        <div class="item"><div class="title">Uniformly Monotone Partitioning of Polygons Revisited</div><div class="small">Hwi Kim, Jaegun Lee, Hee-Kap Ahn · CCCG 2022 · 2022</div></div>
+        <div class="item"><div class="title">Bichromatic Classifications using Strips</div><div class="small"><u>Jaegun Lee</u>, Chaeyoon Chung, Hee-Kap Ahn · SWAT 2026</div></div>
+        <div class="item"><div class="title">CG#Hunters Approach to Central Triangulation Under Parallel Flip Operations</div><div class="small"><u>Jaegun Lee</u>, Seokyun Kang, Hyeonseok Lee, Hyeyun Yang, Taehoon Ahn · SoCG 2026</div></div>
+        <div class="item"><div class="title"><a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ISAAC.2025.21"></a>Covering Weighted Points using Unit Squares</div><div class="small">Chaeyoon Chung, <u>Jaegun Lee</u>, Hee-Kap Ahn · ISAAC 2025</div></div>
+        <div class="item"><div class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-98740-3_6"></a>Monotone Partitions of Simple Polygons</div><div class="small"><u>Jaegun Lee</u>, Hyojeong An, Hwi Kim, Hee-Kap Ahn · IWOCA 2025</div></div>
+        <div class="item"><div class="title"><a href="https://doi.org/10.4230/LIPIcs.SoCG.2025.80"></a>Incremental algorithm and local search for minimum non-obtuse triangulation</div><div class="small">Taehoon Ahn, <u>Jaegun Lee</u>, Byeonguk Kang, Hwi Kim · SoCG 2025</div></div>
+        <div class="item"><div class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-38906-1_18"></a>Efficient k-center algorithms for planar points in convex position</div><div class="small">Jongmin Choi, <u>Jaegun Lee</u>, Hee-Kap Ahn · WADS 2023</div></div>
+        <div class="item"><div class="title"><a href="https://www.torontomu.ca/content/dam/canadian-conference-computational-geometry-2022/papers/CCCG2022_paper_23.pdf">Uniformly Monotone Partitioning of Polygons Revisited</a></div><div class="small">Hwi Kim, <u>Jaegun Lee</u>, Hee-Kap Ahn · CCCG 2022</div></div>
       </div>
     </div>
   </div></section>
 
   <section><div class="grid2">
     <div class="card"><h2>Talks</h2>
-      <div class="item"><div class="title">Bichromatic Classifications using Strips</div><div class="small">AAAC 2026 · 2026</div></div>
-      <div class="item"><div class="title">Monotone Partitions of Simple Polygons</div><div class="small">AAAC 2025 · 2025</div></div>
-      <div class="item"><div class="title">Efficient k-center algorithms for planar points in convex position</div><div class="small">WAAC 2023 · 2023</div></div>
+      <div class="item"><div class="title">Bichromatic Classifications using Strips</div><div class="small">The 17th Annual Meeting of Asian Association for Algorithms and Computation (AAAC 2026).</div></div>
+      <div class="item"><div class="title">Monotone Partitions of Simple Polygons</div><div class="small">The 16th Annual Meeting of Asian Association for Algorithms and Computation (AAAC 2025).</div></div>
+      <div class="item"><div class="title">Efficient k-center algorithms for planar points in convex position</div><div class="small">The 23rd Japan–Korea Joint Workshop on Algorithms and Computation (WAAC 2023).</div></div>
     </div>
     <div class="card"><h2>Scholarships &amp; Awards</h2>
       <ul>
-        <li>Third Place at CG:SHOP SoCG Competition (2026)</li>
-        <li>Second Place &amp; First Place in Junior at CG:SHOP SoCG Competition (2025)</li>
-        <li>Bang Sung-Yang Graduate Fellowship (2022)</li>
+        <li><a href="https://cgshop.ibr.cs.tu-bs.de/competition/cg-shop-2026/#ranking">Third Place</a> at <a href=""https://cgshop.ibr.cs.tu-bs.de/competition/cg-shop-2026/#problem-description">CG:SHOP SoCG Competition</a> (2026)</li>
+        <li><a href="https://cgshop.ibr.cs.tu-bs.de/competition/cg-shop-2025/#ranking">Second Place &amp; First Place in Junior</a> at <a href="https://cgshop.ibr.cs.tu-bs.de/competition/cg-shop-2025/#problem-description">CG:SHOP SoCG Competition</a> (2025)</li>
+        <li><a href="https://cse.postech.ac.kr/csepostech/admissions/scholarship.do#none">Bang Sung-Yang Graduate Fellowship</a> (2022)</li>
       </ul>
     </div>
   </div></section>
@@ -145,22 +144,25 @@ ul{margin:.45rem 0 0;padding-left:1.15rem} footer{padding:1rem 0 3rem;color:var(
 
   <section id="activities"><div class="grid2">
     <div class="card"><h2>Academic Activities</h2>
-      <div class="item"><div class="title">Conference Organization</div><ul><li>WAAC 2026 · 2026</li><li>KWCG 2026 · 2025</li></ul></div>
-      <div class="item"><div class="title">Reviewer</div><ul><li>CGTA · 2024</li><li>STACS · 2025</li><li>WALCOM · 2025</li><li>SoCG · 2024</li><li>TAMC · 2024</li><li>ISAAC · 2023</li></ul></div>
+      <div class="item"><div class="title">Conference Organization</div><ul><li>WAAC 2026</li>
+        <!-- <li>KWCG 2026 · 2025</li> -->
+      </ul></div>
+      <div class="item"><div class="title">Official Reviewer of Journals</div><ul><li>CGTA · 2024</li></ul></div>
+      <div class="item"><div class="title">Official Reviewer of Conferences</div><ul><li>STACS · 2025</li><li>WALCOM · 2025</li><li>SoCG · 2024</li><li>TAMC · 2024</li><li>ISAAC · 2023</li></ul></div>
       <div class="item"><div class="title">Educational Activities</div><ul><li>POSCO AI Expert · 2022</li><li>Youth AI·Bigdata Academy · 2022.6, 2022.12, 2023, 2024.2, 2024.8, 2025.4</li><li>HuStar Innovation Academy · 2022</li><li>POSTECH CSED331 Algorithms TA · 2022, 2023</li><li>Pohang Jecheol High School Advanced Thinking Program TA · 2022</li></ul></div>
     </div>
     <div class="card"><h2>Extra Activities</h2>
-      <div class="item"><div class="title">Lab Activities</div><ul><li>KWCG 2025 Local Organizer · 2025</li><li>Lab Manager · 2025–2026</li></ul></div>
-      <div class="item"><div class="title">Work Experience</div><ul><li>Polaris3D · Developer (Out-of-stock Detection Model, demo at CES 2020) · 2019–2020</li></ul></div>
+      <div class="item"><div class="title">Lab Activities</div><ul>
+        <!-- <li>KWCG 2025 Local Organizer · 2025</li> -->
+        <li><a href="algo.postech.ac.kr">Algorithms Lab</a> Manager · 2025–2026</li></ul></div>
+      <div class="item"><div class="title">Work Experience</div><ul><li>Polaris3D · Developer (Out-of-stock Detection Model, <a href="https://youtu.be/YsPO0NYY3rw?si=Nfl7X5iwThGmbPDP">demo at CES 2020</a>) · 2019–2020</li></ul></div>
       <div class="item"><div class="title">Student &amp; Club Activities</div><ul><li>Student Council of Department · 2018</li><li>Adlib (drama club) · 2017–2022, President in 2019</li><li>Tachyons (baseball club) · 2017–present</li></ul></div>
     </div>
   </div></section>
 
   <section id="contact"><div class="card"><h2>Contact</h2>
     <p>Email: <a href="mailto:jagunlee@postech.ac.kr">jagunlee@postech.ac.kr</a><br>Affiliation: Department of Computer Science and Engineering, POSTECH</p>
-    <p class="small">This public-site version intentionally omits the full street address for privacy.</p>
   </div></section>
 </main>
-<footer class="wrap">Built from CV information. Add paper links, slides, Google Scholar, DBLP, or GitHub repositories as your next step.</footer>
 </body>
 </html>
