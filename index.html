@@ -19,7 +19,7 @@ h1{margin:0 0 .35rem;font-size:clamp(2.2rem,5vw,3.7rem);line-height:1.05}.sub{ma
 .pills{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.2rem}.pill{padding:.5rem .8rem;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted)}
 .hero-top{display:grid;grid-template-columns:160px 1fr;gap:1.5rem;align-items:center}.profile-wrap{display:flex;justify-content:center}.profile-photo{width:172px;height:172px;border-radius:50%;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.95rem;text-align:center;overflow:hidden;box-shadow:0 8px 24px rgba(17,24,39,.08)}.profile-photo img{width:100%;height:100%;object-fit:cover;display:block}.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem}.btn{padding:.82rem 1.05rem;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--text);font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}.icon-link{display:inline-flex;align-items:center;gap:.5rem}.icon-link svg{width:18px;height:18px;flex:0 0 18px}
 main{padding-bottom:3rem} section{margin-top:1rem} h2{margin:0 0 .8rem;font-size:1.35rem} h3{margin:.2rem 0 .65rem;font-size:1.05rem}
-.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.item+.item{margin-top:.95rem;padding-top:.95rem;border-top:1px solid var(--line)} .title{font-weight:700}.small{color:var(--muted);font-size:.95rem}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.item+.item{margin-top:.95rem;padding-top:.95rem;border-top:1px solid var(--line)} .title{font-weight:700}.small{color:var(--muted);font-size:.75rem}
 ul{margin:.45rem 0 0;padding-left:1.15rem} footer{padding:1rem 0 3rem;color:var(--muted);font-size:.92rem}
 @media (max-width:860px){nav{flex-direction:column;align-items:flex-start}.grid2{grid-template-columns:1fr}.hero-top{grid-template-columns:1fr}.profile-wrap{justify-content:flex-start}.hero-card,.card{padding:1.15rem}}
 </style>
@@ -94,23 +94,24 @@ ul{margin:.45rem 0 0;padding-left:1.15rem} footer{padding:1rem 0 3rem;color:var(
   </div></section>
 
   <section id="publications"><div class="card"><h2>Publications</h2>
-    <div class="grid2">
+    <!-- <div class="grid2"> -->
       <div>
         <h3>Journal</h3>
-        <div class="item"><div class="title"><a href="https://doi.org/10.1016/j.tcs.2024.114724">Uniformly monotone partitioning of polygons</a></div><div class="small">Hwi Kim, <u>Jaegun Lee</u>, Hee-Kap Ahn · Theoretical Computer Science · 2024</div></div>
-        <div class="item"><div class="title"><a href="https://doi.org/10.1016/j.comgeo.2022.101965">Rectangular Partitions of a Rectilinear Polygon</a></div><div class="small">Hwi Kim, <u>Jaegun Lee</u>, Hee-Kap Ahn · Computational Geometry · 2023</div></div>
+        <div class="item"><div class="title"><a href="https://doi.org/10.1016/j.tcs.2024.114724">Uniformly monotone partitioning of polygons</a></div><div class="small">Hwi Kim, <u>Jaegun Lee</u>, Hee-Kap Ahn<div>Theoretical Computer Science · 2024</div></div></div>
+        <div class="item"><div class="title"><a href="https://doi.org/10.1016/j.comgeo.2022.101965">Rectangular Partitions of a Rectilinear Polygon</a></div><div class="small">Hwi Kim, <u>Jaegun Lee</u>, Hee-Kap Ahn<div>Computational Geometry · 2023</div></div></div>
+        <div class="item"></div>
       </div>
       <div>
         <h3>Conference</h3>
-        <div class="item"><div class="title">Bichromatic Classifications using Strips</div><div class="small"><u>Jaegun Lee</u>, Chaeyoon Chung, Hee-Kap Ahn · SWAT 2026</div></div>
-        <div class="item"><div class="title">CG#Hunters Approach to Central Triangulation Under Parallel Flip Operations</div><div class="small"><u>Jaegun Lee</u>, Seokyun Kang, Hyeonseok Lee, Hyeyun Yang, Taehoon Ahn · SoCG 2026</div></div>
-        <div class="item"><div class="title"><a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ISAAC.2025.21">Covering Weighted Points using Unit Squares</a></div><div class="small">Chaeyoon Chung, <u>Jaegun Lee</u>, Hee-Kap Ahn · ISAAC 2025</div></div>
-        <div class="item"><div class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-98740-3_6">Monotone Partitions of Simple Polygons</a></div><div class="small"><u>Jaegun Lee</u>, Hyojeong An, Hwi Kim, Hee-Kap Ahn · IWOCA 2025</div></div>
-        <div class="item"><div class="title"><a href="https://doi.org/10.4230/LIPIcs.SoCG.2025.80">Incremental algorithm and local search for minimum non-obtuse triangulation</a></div><div class="small">Taehoon Ahn, <u>Jaegun Lee</u>, Byeonguk Kang, Hwi Kim · SoCG 2025</div></div>
-        <div class="item"><div class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-38906-1_18">Efficient k-center algorithms for planar points in convex position</a></div><div class="small">Jongmin Choi, <u>Jaegun Lee</u>, Hee-Kap Ahn · WADS 2023</div></div>
-        <div class="item"><div class="title"><a href="https://www.torontomu.ca/content/dam/canadian-conference-computational-geometry-2022/papers/CCCG2022_paper_23.pdf">Uniformly Monotone Partitioning of Polygons Revisited</a></div><div class="small">Hwi Kim, <u>Jaegun Lee</u>, Hee-Kap Ahn · CCCG 2022</div></div>
+        <div class="item"><div class="title">Bichromatic Classifications using Strips</div><div class="small"><u>Jaegun Lee</u>, Chaeyoon Chung, Hee-Kap Ahn <div>The 20th Scandinavian Symposium on Algorithm Theory (SWAT 2026).</div></div></div>
+        <div class="item"><div class="title">CG#Hunters Approach to Central Triangulation Under Parallel Flip Operations</div><div class="small"><u>Jaegun Lee</u>, Seokyun Kang, Hyeonseok Lee, Hyeyun Yang, Taehoon Ahn <div>The 42nd International Symposium on Computational Geometry (SoCG 2026).</div></div></div>
+        <div class="item"><div class="title"><a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ISAAC.2025.21">Covering Weighted Points using Unit Squares</a></div><div class="small">Chaeyoon Chung, <u>Jaegun Lee</u>, Hee-Kap Ahn<div>The 36th International Symposium on Algorithms and Computation (ISAAC 2025).</div></div></div>
+        <div class="item"><div class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-98740-3_6">Monotone Partitions of Simple Polygons</a></div><div class="small"><u>Jaegun Lee</u>, Hyojeong An, Hwi Kim, Hee-Kap Ahn<div>The 36th International Workshop on Combinatorial Algorithms (IWOCA 2025).</div></div></div>
+        <div class="item"><div class="title"><a href="https://doi.org/10.4230/LIPIcs.SoCG.2025.80">Incremental algorithm and local search for minimum non-obtuse triangulation</a></div><div class="small">Taehoon Ahn, <u>Jaegun Lee</u>, Byeonguk Kang, Hwi Kim<div>The 41st International Symposium on Computational Geometry (SoCG 2025).</div></div></div>
+        <div class="item"><div class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-38906-1_18">Efficient k-center algorithms for planar points in convex position</a></div><div class="small">Jongmin Choi, <u>Jaegun Lee</u>, Hee-Kap Ahn<div>The 18th Algorithms and Data Structures Symposium (WADS 2023).</div></div></div>
+        <div class="item"><div class="title"><a href="https://www.torontomu.ca/content/dam/canadian-conference-computational-geometry-2022/papers/CCCG2022_paper_23.pdf">Uniformly Monotone Partitioning of Polygons Revisited</a></div><div class="small">Hwi Kim, <u>Jaegun Lee</u>, Hee-Kap Ahn<div>The 34th Canadian Conference on Computational Geometry (CCCG 2022).</div></div></div>
       </div>
-    </div>
+    <!-- </div> -->
   </div></section>
 
   <section><div class="grid2">
