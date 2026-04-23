@@ -1,0 +1,282 @@
+%-------------------------
+% CV in template style adapted for Jaegun Lee
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage[scale=0.90,lf]{FiraMono}
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\usepackage{tgheros}
+\usepackage[T1]{fontenc}
+
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+\renewcommand*\familydefault{\sfdefault}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \bfseries \vspace{2pt} \raggedright \large
+}{}{0em}{}[\color{light-grey}{\titlerule[2pt]} \vspace{-4pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-1pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\
+      \textit{#3} & {\color{dark-grey} \small #4}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey} #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]} 
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.2em]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Jaegun Lee} \\ \vspace{5pt}
+    \small \faEnvelope \hspace{2pt} \href{mailto:jagunlee@postech.ac.kr}{\texttt{jagunlee@postech.ac.kr}} \hspace{1pt} $|$
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Pohang, South Korea} \hspace{1pt} $|$
+    \hspace{1pt} \href{https://scholar.google.co.kr/citations?hl=en&user=FCnNJhUAAAAJ}{\texttt{Google Scholar}}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------RESEARCH INTERESTS-----------
+\section{RESEARCH INTERESTS}
+\begin{itemize}[leftmargin=0in, label={}]
+  \small{\item{
+    \textbf{Area} {: Computational Geometry and Geometric Algorithms} \\
+    \textbf{Topics} {: Partitioning, covering, triangulation, and related optimization problems}
+  }}
+\end{itemize}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Pohang University of Science and Technology (POSTECH)}{2022 -- Present}
+  {M.S./Ph.D. Integrated Program in Computer Science and Engineering}{Pohang, South Korea}
+  \resumeItemListStart
+    \resumeItem{Advisor: Hee-Kap Ahn}
+    \resumeItem{GPA: 4.04/4.3}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Pohang University of Science and Technology (POSTECH)}{2017 -- 2022}
+  {B.S. in Creative IT Engineering \& Mathematics}{Pohang, South Korea}
+  \resumeItemListStart
+    \resumeItem{GPA: 3.81/4.3 (\textit{Cum Laude})}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section{PUBLICATIONS}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading{\textbf{Journal Articles}}{}
+\resumeItemListStart
+  \resumeItem{Hwi Kim, \textbf{Jaegun Lee}, Hee-Kap Ahn. \textit{Uniformly monotone partitioning of polygons}. \textit{Theoretical Computer Science}, 2024.}
+  \resumeItem{Hwi Kim, \textbf{Jaegun Lee}, Hee-Kap Ahn. \textit{Rectangular Partitions of a Rectilinear Polygon}. \textit{Computational Geometry}, 2023.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{Conference Papers}}{}
+\resumeItemListStart
+  \resumeItem{\textbf{Jaegun Lee}, Chaeyoon Chung, Hee-Kap Ahn. \textit{Bichromatic Classifications using Strips}. \textit{The 20th Scandinavian Symposium on Algorithm Theory (SWAT)}, 2026.}
+  \resumeItem{\textbf{Jaegun Lee}, Seokyun Kang, Hyeonseok Lee, Hyeyun Yang, Taehoon Ahn. \textit{CG\#Hunters Approach to Central Triangulation Under Parallel Flip Operations}. \textit{The 42nd International Symposium on Computational Geometry (SoCG)}, 2026.}
+  \resumeItem{Chaeyoon Chung, \textbf{Jaegun Lee}, Hee-Kap Ahn. \textit{Covering Weighted Points using Unit Squares}. \textit{The 36th International Symposium on Algorithms and Computation (ISAAC)}, 2025.}
+  \resumeItem{\textbf{Jaegun Lee}, Hyojeong An, Hwi Kim, Hee-Kap Ahn. \textit{Monotone Partitions of Simple Polygons}. \textit{The 36th International Workshop on Combinatorial Algorithms (IWOCA)}, 2025.}
+  \resumeItem{Taehoon Ahn, \textbf{Jaegun Lee}, Byeonguk Kang, Hwi Kim. \textit{Incremental algorithm and local search for minimum non-obtuse triangulation}. \textit{The 41st International Symposium on Computational Geometry (SoCG)}, 2025.}
+  \resumeItem{Jongmin Choi, \textbf{Jaegun Lee}, Hee-Kap Ahn. \textit{Efficient k-center algorithms for planar points in convex position}. \textit{The 18th Algorithms and Data Structures Symposium (WADS)}, 2023.}
+  \resumeItem{Hwi Kim, \textbf{Jaegun Lee}, Hee-Kap Ahn. \textit{Uniformly Monotone Partitioning of Polygons Revisited}. \textit{The 34th Canadian Conference on Computational Geometry (CCCG)}, 2022.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{Presentations and Talks at Workshops}}{}
+\resumeItemListStart
+  \resumeItem{\textit{Bichromatic Classifications using Strips}. \textit{The 17th Annual Meeting of Asian Association for Algorithms and Computation (AAAC)}, 2026.}
+  \resumeItem{\textit{Monotone Partitions of Simple Polygons}. \textit{The 16th Annual Meeting of Asian Association for Algorithms and Computation (AAAC)}, 2025.}
+  \resumeItem{\textit{Efficient k-center algorithms for planar points in convex position}. \textit{The 23rd Japan--Korea Joint Workshop on Algorithms and Computation (WAAC)}, 2023.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------SCHOLARSHIPS & AWARDS-----------
+\section{AWARDS AND FELLOWSHIPS}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{Awards and Fellowships}}{}
+\resumeItemListStart
+  \resumeItem{Third Place at the CG:SHOP SoCG Competition, 2026.}
+  \resumeItem{Second Place \& First Place in Junior at the CG:SHOP SoCG Competition, 2025.}
+  \resumeItem{Bang Sung-Yang Graduate Fellowship, 2022.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{Research and Industry Projects}}{}
+\resumeItemListStart
+  \resumeItem{\textbf{Auto Nesting} --- Samsung Heavy Industries, 2025--2026.}
+  \resumeItem{\textbf{Slab Yard Optimization} --- POSCO DX (Team Leader), 2023--2024.}
+  \resumeItem{\textbf{Software Star Lab} --- Optimal Data Structure and Algorithmic Applications in Dynamic Geometric Environment, 2022--2025.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PATENTS-----------
+\section{PATENTS}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{Patents and Applications}}{}
+\resumeItemListStart
+  \resumeItem{\textit{Slab Transfer System Using Virtual Slab Yard Simulator}, Hee-Kap Ahn, \textbf{Jaegun Lee}, Jae Hoon Chung, Chae Yoon Chung, Minju Song. Korean Patent (Application), No. 10-2024-0201787, 2024.}
+  \resumeItem{\textit{Efficient Optimal Facility Location Determination Methods for Convex Position Demand Points}, Hee-Kap Ahn, Tae Kang Eom, Jong Min Choi, \textbf{Jae Gun Lee}. Korean Patent, No. 10-2704974, 2024.}
+  \resumeItem{\textit{Efficient Optimal Facility Location Determination Methods for Convex Position Demand Points}, Hee-Kap Ahn, Tae Kang Eom, Jong Min Choi, \textbf{Jae Gun Lee}. U.S. Patent (Application), No. 18/496700, 2023.}
+  \resumeItem{\textit{METHOD AND APPARATUS FOR CLASSIFYING IMAGE}, Chi Won Sung, \textbf{Jae Gun Lee}. U.S. Patent, No. 11657594, 2023.}
+  \resumeItem{\textit{METHOD AND APPARATUS FOR CLASSIFYING IMAGE}, Chi Won Sung, \textbf{Jae Gun Lee}. Korean Patent, No. 1021590520000, 2020.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------ACADEMIC ACTIVITIES-----------
+\section{ACADEMIC ACTIVITIES}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading{\textbf{Conference Organization}}{}
+\resumeItemListStart
+  \resumeItem{The 26th Korea--Japan Joint Workshop on Algorithms and Computation (WAAC), 2026.}
+  \resumeItem{The 25th Korean Workshop on Computational Geometry (KWCG), 2025.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{Journal Reviewing}}{}
+\resumeItemListStart
+  \resumeItem{\textit{Computational Geometry: Theory and Applications (CGTA)}, 2024.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{Conference Reviewing}}{}
+\resumeItemListStart
+  \resumeItem{Symposium on Theoretical Aspects of Computer Science (STACS), 2025.}
+  \resumeItem{International Conference and Workshop on Algorithms and Computation (WALCOM), 2025.}
+  \resumeItem{International Symposium on Computational Geometry (SoCG), 2024.}
+  \resumeItem{Theory and Applications of Models of Computation (TAMC), 2024.}
+  \resumeItem{International Symposium on Algorithms and Computation (ISAAC), 2023.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATIONAL ACTIVITIES-----------
+\section{EDUCATIONAL ACTIVITIES}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading{\textbf{Teaching Assistant of AI Education Programs for Business}}{}
+\resumeItemListStart
+  \resumeItem{POSCO AI Expert, 2022.}
+  \resumeItem{Youth AI$\cdot$Bigdata Academy, 2022.6, 2022.12, 2023, 2024.2, 2024.8, 2025.4.}
+  \resumeItem{HuStar Innovation Academy\footnote{Education program of local governments (Daegu and Gyeongsangbuk-do).}, 2022.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{Teaching Assistant at POSTECH}}{}
+\resumeItemListStart
+  \resumeItem{CSED331 Algorithms, 2022, 2023.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{Teaching Assistant at Pohang Jecheol High School}}{}
+\resumeItemListStart
+  \resumeItem{Advanced Thinking Program, 2022.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EXTRA ACTIVITIES-----------
+\section{PROFESSIONAL AND OTHER ACTIVITIES}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading{\textbf{Lab Activities}}{}
+\resumeItemListStart
+  \resumeItem{KWCG 2025 Local Organizer, 2025.}
+  \resumeItem{Lab Manager, 2025--2026.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{Work Experience}}{}
+\resumeItemListStart
+  \resumeItem{\textbf{Polaris3D}, 2019--2020. Developer for an out-of-stock detection model; demo at CES 2020.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{Student Organization Activities}}{}
+\resumeItemListStart
+  \resumeItem{Student Council of the Department, 2018.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{Club Activities}}{}
+\resumeItemListStart
+  \resumeItem{Adlib (drama club), 2017--2022; President, 2019.}
+  \resumeItem{Tachyons (baseball club), 2017--Present.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\end{document}
