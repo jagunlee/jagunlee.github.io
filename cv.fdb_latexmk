@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1780919258.5156 "/Users/jaegunlee/jagunlee.github.io/cv.tex" "cv.pdf" "cv" 1780919259.01785 0
-  "/Users/jaegunlee/jagunlee.github.io/cv.tex" 1780919258.3013 11784 158fe2aa056a5ffff3692792f45166bf ""
+["pdflatex"] 1780925747.65952 "/Users/jaegunlee/jagunlee.github.io/cv.tex" "cv.pdf" "cv" 1780925748.16715 0
+  "/Users/jaegunlee/jagunlee.github.io/cv.tex" 1780925747.4188 11780 95bf4da437022a59555ff0fbedf0b5ca ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fira/fir_i3ioen.enc" 1570828436 2862 216913a462814c3772679fedc1bbde0e ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc" 1622837620 3042 0e2b14b9be7d01075a4c4591d5d1781b ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc" 1622837620 2906 e48aa7c95dea478a2e011bcb4f7878c9 ""
@@ -123,9 +123,9 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1752400334 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1752400308 3345741 0d9c2ce85ebacb4324be70d3443f5bff ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "cv.aux" 1780919258.96305 1303 9566047ed09935442cd1ee7c3aceccb7 "pdflatex"
-  "cv.out" 1780919258.96344 1161 73b0012e68c1d3fdc905512638c9f0c2 "pdflatex"
-  "cv.tex" 1780919258.3013 11784 158fe2aa056a5ffff3692792f45166bf ""
+  "cv.aux" 1780925748.11194 1303 9566047ed09935442cd1ee7c3aceccb7 "pdflatex"
+  "cv.out" 1780925748.11235 1161 73b0012e68c1d3fdc905512638c9f0c2 "pdflatex"
+  "cv.tex" 1780925747.4188 11780 95bf4da437022a59555ff0fbedf0b5ca ""
   (generated)
   "cv.aux"
   "cv.log"
