@@ -1,0 +1,396 @@
+window.CONFERENCE_DATA = {
+  "updated": "2026-07-21",
+  "sourceNote": "공식 학회 페이지와 CFP Timeline의 2026–2027 데이터로 초기화했습니다. 개최 장소가 아직 발표되지 않은 연도는 미정으로 표시하며, 점선/사선 무늬 일정은 과거 주기를 바탕으로 한 추정값입니다.",
+  "conferences": [
+    {
+      "acronym": "CCCG",
+      "name": "Canadian Conference on Computational Geometry",
+      "homepage": "https://sites.google.com/view/cccg-2026/home",
+      "editions": [
+        {
+          "year": 2026,
+          "submission": "2026-05-12",
+          "notification": "2026-06-12",
+          "cameraReady": "2026-06-30",
+          "conferenceStart": "2026-08-12",
+          "conferenceEnd": "2026-08-14",
+          "source": "https://sites.google.com/view/cccg-2026/home",
+          "location": "Lakehead University Orillia Campus, Orillia, Ontario, Canada"
+        },
+        {
+          "year": 2027,
+          "submission": "2027-05-12",
+          "notification": "2027-06-12",
+          "cameraReady": "2027-06-30",
+          "conferenceStart": "2027-08-12",
+          "conferenceEnd": "2027-08-14",
+          "estimated": [
+            "submission",
+            "notification",
+            "cameraReady",
+            "conferenceStart",
+            "conferenceEnd"
+          ],
+          "source": "https://sites.google.com/view/cccg-2026/home",
+          "location": "미정"
+        }
+      ]
+    },
+    {
+      "acronym": "WADS",
+      "name": "Algorithms and Data Structures Symposium",
+      "homepage": "https://www.wads.org/",
+      "editions": [
+        {
+          "year": 2027,
+          "submission": "2027-02-21",
+          "notification": "2027-04-21",
+          "conferenceStart": "2027-08-09",
+          "conferenceEnd": "2027-08-13",
+          "estimated": [
+            "submission",
+            "notification",
+            "conferenceStart",
+            "conferenceEnd"
+          ],
+          "source": "https://www.wads.org/",
+          "location": "미정"
+        }
+      ]
+    },
+    {
+      "acronym": "SWAT",
+      "name": "Scandinavian Symposium on Algorithm Theory",
+      "homepage": "https://swat-symposium.org/",
+      "editions": [
+        {
+          "year": 2026,
+          "abstract": "2026-02-16",
+          "submission": "2026-02-20",
+          "notification": "2026-04-10",
+          "cameraReady": "2026-04-17",
+          "conferenceStart": "2026-06-17",
+          "conferenceEnd": "2026-06-19",
+          "source": "https://swat2026.compute.dtu.dk/",
+          "location": "IDA Conference (Ingeniørernes Hus), Copenhagen, Denmark"
+        }
+      ]
+    },
+    {
+      "acronym": "STACS",
+      "name": "Symposium on Theoretical Aspects of Computer Science",
+      "homepage": "https://stacs-conf.org/",
+      "editions": [
+        {
+          "year": 2026,
+          "submission": "2025-09-25",
+          "notification": "2025-12-12",
+          "conferenceStart": "2026-03-09",
+          "conferenceEnd": "2026-03-13",
+          "source": "https://stacs2026.imag.fr/",
+          "location": "Grenoble, France"
+        },
+        {
+          "year": 2027,
+          "submission": "2026-10-11",
+          "notification": "2026-12-22",
+          "conferenceStart": "2027-03-08",
+          "conferenceEnd": "2027-03-12",
+          "source": "https://events.gwdg.de/event/1460/",
+          "location": "Alte Mensa, Göttingen, Germany"
+        }
+      ]
+    },
+    {
+      "acronym": "SODA",
+      "name": "ACM–SIAM Symposium on Discrete Algorithms",
+      "homepage": "https://www.siam.org/conferences-events/siam-conferences/soda27/",
+      "editions": [
+        {
+          "year": 2026,
+          "submission": "2025-07-14",
+          "conferenceStart": "2026-01-11",
+          "conferenceEnd": "2026-01-14",
+          "source": "https://www.siam.org/conferences-events/siam-conferences/soda26/",
+          "location": "Hyatt Regency Vancouver, Vancouver, Canada"
+        },
+        {
+          "year": 2027,
+          "submission": "2026-07-09",
+          "conferenceStart": "2027-01-24",
+          "conferenceEnd": "2027-01-27",
+          "source": "https://www.siam.org/conferences-events/siam-conferences/soda27/",
+          "location": "Sheraton Philadelphia Downtown, Philadelphia, Pennsylvania, U.S."
+        }
+      ]
+    },
+    {
+      "acronym": "SoCG",
+      "name": "International Symposium on Computational Geometry",
+      "homepage": "https://www.computational-geometry.org/",
+      "editions": [
+        {
+          "year": 2026,
+          "abstract": "2025-11-25",
+          "submission": "2025-12-02",
+          "notification": "2026-02-05",
+          "cameraReady": "2026-03-24",
+          "conferenceStart": "2026-06-02",
+          "conferenceEnd": "2026-06-05",
+          "source": "https://cgweek26.computational-geometry.org/contribute/",
+          "location": "Rutgers Academic Building – East Wing, New Brunswick, New Jersey, U.S."
+        },
+        {
+          "year": 2027,
+          "abstract": "2026-11-24",
+          "submission": "2026-12-01",
+          "notification": "2027-02-04",
+          "cameraReady": "2027-03-23",
+          "conferenceStart": "2027-06-02",
+          "conferenceEnd": "2027-06-05",
+          "estimated": [
+            "abstract",
+            "submission",
+            "notification",
+            "cameraReady"
+          ],
+          "source": "https://www.computational-geometry.org/",
+          "location": "미정"
+        }
+      ]
+    },
+    {
+      "acronym": "LATIN",
+      "name": "Latin American Theoretical Informatics Symposium",
+      "homepage": "https://latin2026.ufsc.br/",
+      "editions": [
+        {
+          "year": 2026,
+          "abstract": "2025-10-13",
+          "submission": "2025-10-20",
+          "notification": "2026-01-09",
+          "cameraReady": "2026-02-01",
+          "conferenceStart": "2026-04-13",
+          "conferenceEnd": "2026-04-17",
+          "source": "https://latin2026.ufsc.br/",
+          "location": "Auditório do CCB, UFSC, Florianópolis, Brazil"
+        }
+      ]
+    },
+    {
+      "acronym": "ISAAC",
+      "name": "International Symposium on Algorithms and Computation",
+      "homepage": "https://www.algo-door.com/isaac2026/",
+      "editions": [
+        {
+          "year": 2026,
+          "submission": "2026-06-26",
+          "conferenceStart": "2026-12-06",
+          "conferenceEnd": "2026-12-09",
+          "source": "https://www.algo-door.com/isaac2026/",
+          "location": "Jinxi Hotel, Hangzhou, China"
+        },
+        {
+          "year": 2027,
+          "submission": "2027-06-26",
+          "conferenceStart": "2027-12-06",
+          "conferenceEnd": "2027-12-09",
+          "estimated": [
+            "submission",
+            "conferenceStart",
+            "conferenceEnd"
+          ],
+          "source": "https://www.algo-door.com/isaac2026/",
+          "location": "미정"
+        }
+      ]
+    },
+    {
+      "acronym": "FSTTCS",
+      "name": "Foundations of Software Technology and Theoretical Computer Science",
+      "homepage": "https://www.fsttcs.org.in/",
+      "editions": [
+        {
+          "year": 2026,
+          "abstract": "2026-07-04",
+          "submission": "2026-07-11",
+          "notification": "2026-09-15",
+          "conferenceStart": "2026-12-16",
+          "conferenceEnd": "2026-12-18",
+          "source": "https://www.fsttcs.org.in/2026/",
+          "location": "IIT Delhi, New Delhi, India"
+        },
+        {
+          "year": 2027,
+          "abstract": "2027-07-04",
+          "submission": "2027-07-11",
+          "notification": "2027-09-15",
+          "conferenceStart": "2027-12-16",
+          "conferenceEnd": "2027-12-18",
+          "estimated": [
+            "abstract",
+            "submission",
+            "notification",
+            "conferenceStart",
+            "conferenceEnd"
+          ],
+          "source": "https://www.fsttcs.org.in/",
+          "location": "미정"
+        }
+      ]
+    },
+    {
+      "acronym": "WALCOM",
+      "name": "International Conference and Workshops on Algorithms and Computation",
+      "homepage": "https://sites.google.com/gapps.ntnu.edu.tw/walcom2027",
+      "editions": [
+        {
+          "year": 2026,
+          "submission": "2025-09-21",
+          "notification": "2025-11-07",
+          "cameraReady": "2025-11-19",
+          "conferenceStart": "2026-03-04",
+          "conferenceEnd": "2026-03-06",
+          "source": "https://mozart.diei.unipg.it/walcom2026/",
+          "location": "University of Perugia, Perugia, Italy"
+        },
+        {
+          "year": 2027,
+          "submission": "2026-09-21",
+          "notification": "2026-11-09",
+          "cameraReady": "2026-12-09",
+          "conferenceStart": "2027-03-24",
+          "conferenceEnd": "2027-03-26",
+          "source": "https://sites.google.com/gapps.ntnu.edu.tw/walcom2027",
+          "location": "Taipei, Taiwan"
+        }
+      ]
+    },
+    {
+      "acronym": "IWOCA",
+      "name": "International Workshop on Combinatorial Algorithms",
+      "homepage": "https://kam.mff.cuni.cz/conferences/iwoca27/",
+      "editions": [
+        {
+          "year": 2026,
+          "abstract": "2026-01-26",
+          "submission": "2026-02-02",
+          "notification": "2026-03-25",
+          "cameraReady": "2026-04-06",
+          "conferenceStart": "2026-06-08",
+          "conferenceEnd": "2026-06-12",
+          "source": "https://iwoca2026.limos.fr/",
+          "location": "Université Clermont Auvergne, Clermont-Ferrand, France"
+        },
+        {
+          "year": 2027,
+          "abstract": "2027-02-08",
+          "submission": "2027-02-15",
+          "notification": "2027-04-12",
+          "cameraReady": "2027-04-22",
+          "conferenceStart": "2027-06-21",
+          "conferenceEnd": "2027-06-25",
+          "source": "https://kam.mff.cuni.cz/conferences/iwoca27/",
+          "location": "Faculty of Mathematics and Physics, Charles University, Prague, Czechia"
+        }
+      ]
+    },
+    {
+      "acronym": "FOCS",
+      "name": "IEEE Symposium on Foundations of Computer Science",
+      "homepage": "https://ieee-focs.org/",
+      "editions": [
+        {
+          "year": 2026,
+          "submission": "2026-04-01",
+          "notification": "2026-07-03",
+          "conferenceStart": "2026-11-08",
+          "conferenceEnd": "2026-11-11",
+          "source": "https://sanjeevkhanna.org/FOCS2026_CFP.html",
+          "location": "New York City, New York, U.S."
+        },
+        {
+          "year": 2027,
+          "submission": "2027-04-01",
+          "notification": "2027-07-03",
+          "conferenceStart": "2027-11-07",
+          "conferenceEnd": "2027-11-10",
+          "estimated": [
+            "submission",
+            "notification",
+            "conferenceStart",
+            "conferenceEnd"
+          ],
+          "source": "https://ieee-focs.org/",
+          "location": "미정"
+        }
+      ]
+    },
+    {
+      "acronym": "STOC",
+      "name": "ACM Symposium on Theory of Computing",
+      "homepage": "https://acm-stoc.org/",
+      "editions": [
+        {
+          "year": 2026,
+          "submission": "2025-11-04",
+          "notification": "2026-02-01",
+          "cameraReady": "2026-03-31",
+          "conferenceStart": "2026-06-22",
+          "conferenceEnd": "2026-06-26",
+          "source": "https://acm-stoc.org/stoc2026/stoc2026-cfp.html",
+          "location": "Salt Lake City, Utah, U.S."
+        },
+        {
+          "year": 2027,
+          "submission": "2026-11-04",
+          "notification": "2027-02-01",
+          "cameraReady": "2027-03-31",
+          "conferenceStart": "2027-06-21",
+          "conferenceEnd": "2027-06-25",
+          "estimated": [
+            "submission",
+            "notification",
+            "cameraReady",
+            "conferenceStart",
+            "conferenceEnd"
+          ],
+          "source": "https://acm-stoc.org/",
+          "location": "미정"
+        }
+      ]
+    },
+    {
+      "acronym": "SEA",
+      "name": "International Symposium on Experimental Algorithms",
+      "homepage": "https://sea2027.iti.kit.edu/",
+      "editions": [
+        {
+          "year": 2026,
+          "submission": "2026-02-02",
+          "notification": "2026-03-31",
+          "cameraReady": "2026-06-22",
+          "conferenceStart": "2026-06-22",
+          "conferenceEnd": "2026-06-24",
+          "source": "https://sea2026.github.io/",
+          "location": "IDA Conference Center, Copenhagen, Denmark"
+        },
+        {
+          "year": 2027,
+          "submission": "2027-02-02",
+          "notification": "2027-03-31",
+          "cameraReady": "2027-06-22",
+          "conferenceStart": "2027-06-22",
+          "conferenceEnd": "2027-06-24",
+          "estimated": [
+            "submission",
+            "notification",
+            "cameraReady"
+          ],
+          "source": "https://sea2027.iti.kit.edu/",
+          "location": "Karlsruhe Institute of Technology, Karlsruhe, Germany"
+        }
+      ]
+    }
+  ]
+};

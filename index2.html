@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Computational geometry and algorithms conference CFP timeline" />
+  <title>CG Conference Timeline</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-block">
+        <p class="eyebrow">CALL FOR PAPERS</p>
+        <div class="title-line">
+          <h1>CG Conference Timeline</h1>
+          <span class="count-badge" id="conferenceCount">14 conferences</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="button button-primary" id="todayButton" type="button">
+          <span class="button-icon" aria-hidden="true">◎</span>
+          오늘로 이동
+        </button>
+        <button class="icon-button" id="themeButton" type="button" aria-label="다크 모드 전환" title="다크 모드 전환">◐</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="control-panel" aria-label="타임라인 설정">
+        <label class="search-wrap">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <span class="sr-only">학회 검색</span>
+          <input id="searchInput" type="search" placeholder="학회명 또는 약어 검색" autocomplete="off" />
+          <kbd>/</kbd>
+        </label>
+
+        <label class="select-wrap">
+          <span>정렬</span>
+          <select id="sortSelect">
+            <option value="deadline">가까운 마감순</option>
+            <option value="acronym">약어순</option>
+            <option value="conference">가까운 개최일순</option>
+          </select>
+        </label>
+
+        <label class="toggle-control">
+          <input id="hidePastInput" type="checkbox" />
+          <span class="toggle-track" aria-hidden="true"><span></span></span>
+          <span>지난 일정 숨기기</span>
+        </label>
+
+        <div class="zoom-control" aria-label="타임라인 확대 축소">
+          <button id="zoomOutButton" type="button" aria-label="축소">−</button>
+          <output id="zoomOutput">100%</output>
+          <button id="zoomInButton" type="button" aria-label="확대">＋</button>
+        </div>
+      </section>
+
+      <section class="summary-grid" aria-label="일정 요약">
+        <article class="summary-card summary-card-accent">
+          <span class="summary-label">다음 마감</span>
+          <strong id="nextDeadlineName">—</strong>
+          <span id="nextDeadlineDate">—</span>
+        </article>
+        <button class="summary-card summary-card-button" id="deadline90FilterButton" type="button" aria-pressed="false" title="90일 이내 논문 마감이 있는 학회만 표시">
+          <span class="summary-label">90일 안에 마감</span>
+          <strong id="deadline90Count">0</strong>
+          <span>개 일정 · 클릭해서 필터</span>
+        </button>
+        <article class="summary-card">
+          <span class="summary-label">표시 중</span>
+          <strong id="visibleCount">14</strong>
+          <span>개 학회</span>
+        </article>
+        <article class="summary-card">
+          <span class="summary-label">데이터 기준일</span>
+          <strong id="dataUpdated">—</strong>
+          <span>추정 일정은 사선 표시</span>
+        </article>
+      </section>
+
+      <section class="timeline-card" aria-labelledby="timelineHeading">
+        <div class="timeline-card-header">
+          <div>
+            <p class="section-kicker">TIMELINE</p>
+            <h2 id="timelineHeading">학회 일정</h2>
+          </div>
+          <div class="legend" aria-label="범례">
+            <span><i class="legend-swatch conference"></i>학회 개최</span>
+            <span><i class="legend-swatch review"></i>심사 기간</span>
+            <span><i class="legend-swatch presub"></i>초록 → 논문</span>
+            <span><i class="legend-marker diamond"></i>논문 마감</span>
+            <span><i class="legend-marker square"></i>최종본</span>
+            <span><i class="legend-swatch estimated"></i>추정</span>
+          </div>
+        </div>
+
+        <div class="timeline-status" id="timelineStatus" role="status" aria-live="polite"></div>
+        <div class="timeline-scroll" id="timelineScroll" tabindex="0" aria-label="가로로 스크롤 가능한 학회 일정표">
+          <div class="timeline-table" id="timelineTable"></div>
+        </div>
+      </section>
+
+      <p class="data-note" id="dataNote"></p>
+    </main>
+
+    <footer>
+      <span>Local-first static web app</span>
+      <span aria-hidden="true">·</span>
+      <span>일정은 <code>data.js</code>에서 수정</span>
+    </footer>
+  </div>
+
+  <dialog class="detail-dialog" id="detailDialog">
+    <div class="dialog-inner">
+      <button class="dialog-close" id="dialogCloseButton" type="button" aria-label="상세 정보 닫기">×</button>
+      <div id="dialogContent"></div>
+    </div>
+  </dialog>
+
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>이 페이지는 타임라인을 표시하기 위해 JavaScript가 필요합니다.</noscript>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
