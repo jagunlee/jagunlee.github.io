@@ -18,6 +18,7 @@ concurrency:
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -30,6 +31,22 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+
+      - name: Diagnose outbound network and DNS
+        shell: bash
+        run: |
+          set +e
+          echo "## DNS checks"
+          for host in github.com pypi.org cccg.ca www.cccg.ca wikicfp.com www.wikicfp.com; do
+            echo "--- $host"
+            getent ahosts "$host" | head -n 3 || echo "DNS lookup failed"
+          done
+          echo "## HTTP checks"
+          for url in https://github.com https://pypi.org https://cccg.ca http://wikicfp.com/cfp/; do
+            echo "--- $url"
+            curl --ipv4 --location --head --silent --show-error \
+              --connect-timeout 8 --max-time 15 "$url" | head -n 8 || true
+          done
 
       - name: Install updater dependencies
         run: pip install -r requirements.txt

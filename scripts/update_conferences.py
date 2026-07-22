@@ -32,8 +32,10 @@ CONFIG_PATH = ROOT / "conference_sources.json"
 REPORT_PATH = ROOT / ".update-report.json"
 
 USER_AGENT = (
-    "CG-Conference-Timeline/1.0 "
-    "(+https://github.com/; daily academic CFP metadata check)"
+    "Mozilla/5.0 (X11; Linux x86_64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/126.0.0.0 Safari/537.36 "
+    "CG-Conference-Timeline/1.0"
 )
 DATE_FIELDS = (
     "abstract",
@@ -125,28 +127,77 @@ class Candidate:
 
 
 class HttpClient:
-    def __init__(self, wikicfp_delay: float) -> None:
+    def __init__(
+        self,
+        wikicfp_delay: float,
+        *,
+        wikicfp_connect_timeout: float = 4.0,
+        wikicfp_read_timeout: float = 8.0,
+        wikicfp_attempts: int = 1,
+        wikicfp_failure_threshold: int = 1,
+        general_connect_timeout: float = 8.0,
+        general_read_timeout: float = 15.0,
+        general_attempts: int = 2,
+    ) -> None:
         self.session = requests.Session()
         self.session.headers.update({"User-Agent": USER_AGENT, "Accept-Language": "en-US,en;q=0.9"})
         self.wikicfp_delay = wikicfp_delay
+        self.wikicfp_connect_timeout = wikicfp_connect_timeout
+        self.wikicfp_read_timeout = wikicfp_read_timeout
+        self.wikicfp_attempts = max(1, wikicfp_attempts)
+        self.wikicfp_failure_threshold = max(1, wikicfp_failure_threshold)
+        self.general_connect_timeout = general_connect_timeout
+        self.general_read_timeout = general_read_timeout
+        self.general_attempts = max(1, general_attempts)
         self.last_wikicfp_request = 0.0
+        self.wikicfp_failures = 0
+        self.wikicfp_disabled = False
+        self.wikicfp_disable_reason: str | None = None
         self.cache: dict[str, FetchResult | None] = {}
 
-    def get(self, url: str, *, timeout: int = 30) -> FetchResult | None:
+    def _disable_wikicfp(self, reason: str) -> None:
+        if self.wikicfp_disabled:
+            return
+        self.wikicfp_disabled = True
+        self.wikicfp_disable_reason = reason
+        logging.warning(
+            "WikiCFP is unavailable; skipping all remaining WikiCFP requests in this run "
+            "and continuing with official-site discovery. Reason: %s",
+            reason,
+        )
+
+    def get(self, url: str, *, timeout: int | float | tuple[float, float] | None = None) -> FetchResult | None:
         url = normalize_url(url)
         if url in self.cache:
             return self.cache[url]
-        if is_wikicfp(url):
+
+        wiki = is_wikicfp(url)
+        if wiki and self.wikicfp_disabled:
+            logging.info("Skipping WikiCFP request because the circuit breaker is open: %s", url)
+            self.cache[url] = None
+            return None
+
+        if wiki:
             wait = self.wikicfp_delay - (time.monotonic() - self.last_wikicfp_request)
             if wait > 0:
                 time.sleep(wait)
-        for attempt in range(3):
+            request_timeout = timeout or (self.wikicfp_connect_timeout, self.wikicfp_read_timeout)
+            attempts = self.wikicfp_attempts
+        else:
+            request_timeout = timeout or (self.general_connect_timeout, self.general_read_timeout)
+            attempts = self.general_attempts
+
+        for attempt in range(attempts):
             try:
-                response = self.session.get(url, timeout=timeout, allow_redirects=True)
-                if is_wikicfp(url):
+                response = self.session.get(url, timeout=request_timeout, allow_redirects=True)
+                if wiki:
                     self.last_wikicfp_request = time.monotonic()
                 if response.status_code == 429:
-                    time.sleep(10 * (attempt + 1))
+                    if wiki:
+                        self.wikicfp_failures += 1
+                        self._disable_wikicfp("HTTP 429 rate limit")
+                        break
+                    time.sleep(5 * (attempt + 1))
                     continue
                 response.raise_for_status()
                 result = FetchResult(
@@ -157,10 +208,16 @@ class HttpClient:
                 self.cache[url] = result
                 return result
             except requests.RequestException as exc:
-                if is_wikicfp(url):
+                if wiki:
                     self.last_wikicfp_request = time.monotonic()
-                logging.warning("Fetch failed (%s/%s) %s: %s", attempt + 1, 3, url, exc)
-                time.sleep(2 * (attempt + 1))
+                    self.wikicfp_failures += 1
+                logging.warning("Fetch failed (%s/%s) %s: %s", attempt + 1, attempts, url, exc)
+                if wiki and self.wikicfp_failures >= self.wikicfp_failure_threshold:
+                    self._disable_wikicfp(str(exc))
+                    break
+                if attempt + 1 < attempts:
+                    time.sleep(2 * (attempt + 1))
+
         self.cache[url] = None
         return None
 
@@ -404,25 +461,31 @@ def score_wikicfp_candidate(text: str, conf: dict[str, Any], year: int) -> float
 
 def search_wikicfp(client: HttpClient, settings: dict[str, Any], conf: dict[str, Any], year: int) -> str | None:
     queries = [f'{conf["acronym"]} {year}', f'{conf["name"]} {year}']
+    templates = settings.get("searchUrls") or [settings["searchUrl"]]
     for query in queries:
-        url = settings["searchUrl"].format(query=quote_plus(query))
-        result = client.get(url)
-        if not result:
-            continue
-        soup = BeautifulSoup(result.text, "html.parser")
-        candidates: list[tuple[float, str]] = []
-        for anchor in soup.find_all("a", href=True):
-            href = anchor["href"]
-            if "event.showcfp" not in href:
+        for template in templates:
+            url = template.format(query=quote_plus(query))
+            result = client.get(url)
+            if not result:
+                # A failed WikiCFP request may open the circuit breaker. In that case,
+                # trying the second hostname/protocol in the same run adds no value.
+                if client.wikicfp_disabled:
+                    return None
                 continue
-            row = anchor.find_parent("tr")
-            context = row.get_text(" ", strip=True) if row else anchor.get_text(" ", strip=True)
-            score = score_wikicfp_candidate(context, conf, year)
-            candidates.append((score, urljoin(result.url, href)))
-        if candidates:
-            score, best = max(candidates, key=lambda x: x[0])
-            if score >= 55:
-                return best
+            soup = BeautifulSoup(result.text, "html.parser")
+            candidates: list[tuple[float, str]] = []
+            for anchor in soup.find_all("a", href=True):
+                href = anchor["href"]
+                if "event.showcfp" not in href:
+                    continue
+                row = anchor.find_parent("tr")
+                context = row.get_text(" ", strip=True) if row else anchor.get_text(" ", strip=True)
+                score = score_wikicfp_candidate(context, conf, year)
+                candidates.append((score, urljoin(result.url, href)))
+            if candidates:
+                score, best = max(candidates, key=lambda x: x[0])
+                if score >= 55:
+                    return best
     return None
 
 
@@ -780,7 +843,18 @@ def run(args: argparse.Namespace) -> int:
     original = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     data = copy.deepcopy(original)
     conference_map = {item["acronym"]: item for item in data["conferences"]}
-    client = HttpClient(float(config["wikicfp"].get("minimumDelaySeconds", 5.2)))
+    wiki_settings = config.get("wikicfp", {})
+    http_settings = config.get("http", {})
+    client = HttpClient(
+        float(wiki_settings.get("minimumDelaySeconds", 5.2)),
+        wikicfp_connect_timeout=float(wiki_settings.get("connectTimeoutSeconds", 4)),
+        wikicfp_read_timeout=float(wiki_settings.get("readTimeoutSeconds", 8)),
+        wikicfp_attempts=int(wiki_settings.get("maxAttempts", 1)),
+        wikicfp_failure_threshold=int(wiki_settings.get("failureThreshold", 1)),
+        general_connect_timeout=float(http_settings.get("connectTimeoutSeconds", 8)),
+        general_read_timeout=float(http_settings.get("readTimeoutSeconds", 15)),
+        general_attempts=int(http_settings.get("maxAttempts", 2)),
+    )
 
     changes: list[dict[str, Any]] = []
     conflicts: list[dict[str, Any]] = []
@@ -828,6 +902,11 @@ def run(args: argparse.Namespace) -> int:
         "changes": changes,
         "conflictsKept": conflicts,
         "failures": failures,
+        "wikicfpStatus": {
+            "disabledForThisRun": client.wikicfp_disabled,
+            "failureCount": client.wikicfp_failures,
+            "reason": client.wikicfp_disable_reason,
+        },
     }
     REPORT_PATH.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False, indent=2))
