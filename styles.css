@@ -150,10 +150,9 @@ kbd { position: absolute; right: 11px; display: inline-grid; place-items: center
 .timeline-status:not(:empty) { padding-top: 12px; padding-bottom: 2px; }
 .timeline-scroll {
   position: relative;
-  max-height: none;
-  overflow-x: auto;
-  overflow-y: visible;
-  overscroll-behavior-x: contain;
+  max-height: min(69vh, 870px);
+  overflow: auto;
+  overscroll-behavior: contain;
   scrollbar-color: var(--line-strong) transparent;
 }
 .timeline-scroll:focus-visible { outline: 3px solid rgba(239, 106, 75, 0.2); outline-offset: -3px; }
