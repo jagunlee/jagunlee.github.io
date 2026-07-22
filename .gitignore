@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.update-report.json
+update-output.json
+_site/

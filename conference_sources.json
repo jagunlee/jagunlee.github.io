@@ -1,0 +1,110 @@
+{
+  "wikicfp": {
+    "searchUrl": "https://www.wikicfp.com/cfp/servlet/tool.search?q={query}&year=t",
+    "minimumDelaySeconds": 5.2
+  },
+  "horizonYears": 3,
+  "conferences": [
+    {
+      "acronym": "CCCG",
+      "name": "Canadian Conference on Computational Geometry",
+      "aliases": ["Canadian Conference on Computational Geometry"],
+      "seriesHomepage": "https://www.cccg.ca/",
+      "officialDomains": ["cccg.ca", "sites.google.com"]
+    },
+    {
+      "acronym": "WADS",
+      "name": "Algorithms and Data Structures Symposium",
+      "aliases": ["Workshop on Algorithms and Data Structures", "Algorithms and Data Structures Symposium"],
+      "seriesHomepage": "https://www.wads.org/",
+      "officialDomains": ["wads.org"],
+      "years": "odd"
+    },
+    {
+      "acronym": "SWAT",
+      "name": "Scandinavian Symposium on Algorithm Theory",
+      "aliases": ["Scandinavian Workshop on Algorithm Theory", "Scandinavian Symposium on Algorithm Theory"],
+      "seriesHomepage": "https://swat-symposium.org/",
+      "officialDomains": ["swat-symposium.org", "compute.dtu.dk"],
+      "years": "even"
+    },
+    {
+      "acronym": "STACS",
+      "name": "Symposium on Theoretical Aspects of Computer Science",
+      "aliases": ["Symposium on Theoretical Aspects of Computer Science"],
+      "seriesHomepage": "https://stacs-conf.org/",
+      "officialDomains": ["stacs-conf.org", "dagstuhl.de", "gwdg.de", "imag.fr"]
+    },
+    {
+      "acronym": "SODA",
+      "name": "ACM-SIAM Symposium on Discrete Algorithms",
+      "aliases": ["Symposium on Discrete Algorithms", "ACM SIAM Symposium on Discrete Algorithms"],
+      "seriesHomepage": "https://www.siam.org/conferences-events/siam-conferences/",
+      "officialDomains": ["siam.org"]
+    },
+    {
+      "acronym": "SoCG",
+      "name": "International Symposium on Computational Geometry",
+      "aliases": ["Symposium on Computational Geometry", "Computational Geometry Week", "CG Week"],
+      "seriesHomepage": "https://www.computational-geometry.org/",
+      "officialDomains": ["computational-geometry.org"]
+    },
+    {
+      "acronym": "LATIN",
+      "name": "Latin American Theoretical Informatics Symposium",
+      "aliases": ["Latin American Symposium on Theoretical Informatics", "Latin American Theoretical Informatics Symposium"],
+      "seriesHomepage": "https://latinsymposium.org/",
+      "officialDomains": ["latinsymposium.org", "ufsc.br"],
+      "years": "even"
+    },
+    {
+      "acronym": "ISAAC",
+      "name": "International Symposium on Algorithms and Computation",
+      "aliases": ["International Symposium on Algorithms and Computation"],
+      "seriesHomepage": "https://www.algo-door.com/isaac/",
+      "officialDomains": ["algo-door.com"]
+    },
+    {
+      "acronym": "FSTTCS",
+      "name": "Foundations of Software Technology and Theoretical Computer Science",
+      "aliases": ["Foundations of Software Technology and Theoretical Computer Science"],
+      "seriesHomepage": "https://www.fsttcs.org.in/",
+      "officialDomains": ["fsttcs.org.in"]
+    },
+    {
+      "acronym": "WALCOM",
+      "name": "International Conference and Workshops on Algorithms and Computation",
+      "aliases": ["Workshop on Algorithms and Computation", "International Conference and Workshops on Algorithms and Computation"],
+      "seriesHomepage": "https://www.walcom.org/",
+      "officialDomains": ["walcom.org"]
+    },
+    {
+      "acronym": "IWOCA",
+      "name": "International Workshop on Combinatorial Algorithms",
+      "aliases": ["International Workshop on Combinatorial Algorithms"],
+      "seriesHomepage": "https://iwoca.org/",
+      "officialDomains": ["iwoca.org"]
+    },
+    {
+      "acronym": "FOCS",
+      "name": "IEEE Symposium on Foundations of Computer Science",
+      "aliases": ["Symposium on Foundations of Computer Science", "IEEE Symposium on Foundations of Computer Science"],
+      "seriesHomepage": "https://ieee-focs.org/",
+      "officialDomains": ["ieee-focs.org", "computer.org"]
+    },
+    {
+      "acronym": "STOC",
+      "name": "ACM Symposium on Theory of Computing",
+      "aliases": ["Symposium on Theory of Computing", "ACM Symposium on Theory of Computing"],
+      "seriesHomepage": "https://acm-stoc.org/",
+      "officialDomains": ["acm-stoc.org", "acm.org"]
+    },
+    {
+      "acronym": "SEA",
+      "name": "International Symposium on Experimental Algorithms",
+      "aliases": ["Symposium on Experimental Algorithms", "International Symposium on Experimental Algorithms"],
+      "seriesHomepage": "https://sea-symposium.github.io/",
+      "officialDomains": ["github.io", "kit.edu"]
+    }
+  ]
+}

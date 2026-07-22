@@ -1,4 +1,4 @@
-window.CONFERENCE_DATA = {
+{
   "updated": "2026-07-21",
   "sourceNote": "WikiCFP를 우선 확인하고, 검색되지 않는 학회는 공식 홈페이지를 탐색해 자동 갱신합니다. 확인되지 않은 값은 기존 데이터 또는 추정값으로 유지됩니다.",
   "conferences": [
@@ -393,4 +393,4 @@ window.CONFERENCE_DATA = {
       ]
     }
   ]
-};
+}

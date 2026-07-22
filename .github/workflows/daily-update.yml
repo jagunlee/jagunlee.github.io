@@ -1,0 +1,79 @@
+name: Daily CFP update and Pages deploy
+
+on:
+  schedule:
+    # 00:07 UTC = 09:07 Korea Standard Time
+    - cron: "7 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install updater dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run parser tests
+        run: python tests/test_parser.py
+
+      - name: Check WikiCFP and official sites
+        run: python scripts/update_conferences.py | tee update-output.json
+
+      - name: Add report to workflow summary
+        if: always()
+        run: |
+          echo '## Daily CFP update' >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          cat .update-report.json >> "$GITHUB_STEP_SUMMARY" || true
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Rebuild portable HTML and Pages directory
+        run: |
+          python scripts/build_single_html.py
+          python scripts/build_site.py
+
+      - name: Commit verified changes
+        run: |
+          rm -f .update-report.json update-output.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json data.js cg-conference-timeline.html
+          if git diff --cached --quiet; then
+            echo "No conference-data changes."
+          else
+            git commit -m "chore: update conference dates"
+            git push
+          fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
