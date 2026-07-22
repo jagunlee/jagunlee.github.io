@@ -11,8 +11,9 @@ permissions:
   pages: write
   id-token: write
 
+# Prevent two CFP updater runs from writing to main at the same time.
 concurrency:
-  group: "pages"
+  group: cfp-update-main
   cancel-in-progress: false
 
 jobs:
@@ -22,9 +23,13 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -65,23 +70,59 @@ jobs:
           cat .update-report.json >> "$GITHUB_STEP_SUMMARY" || true
           echo '```' >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Rebuild portable HTML and Pages directory
-        run: |
-          python scripts/build_single_html.py
-          python scripts/build_site.py
+      - name: Rebuild portable HTML
+        run: python scripts/build_single_html.py
 
-      - name: Commit verified changes
+      - name: Commit and push verified changes
+        shell: bash
         run: |
+          set -euo pipefail
+
           rm -f .update-report.json update-output.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add data.json data.js cg-conference-timeline.html
+
           if git diff --cached --quiet; then
             echo "No conference-data changes."
           else
             git commit -m "chore: update conference dates"
-            git push
+
+            # main may have changed while the crawler was running. Rebase the
+            # generated commit onto the newest remote main and retry safely.
+            for attempt in 1 2 3; do
+              echo "Push attempt ${attempt}/3"
+              git fetch origin main
+
+              if ! git rebase origin/main; then
+                git rebase --abort || true
+                echo "Rebase conflict. A remote commit changed the same generated files."
+                echo "Resolve the conflict manually, then run this workflow again."
+                exit 1
+              fi
+
+              if git push origin HEAD:main; then
+                echo "Conference updates pushed successfully."
+                break
+              fi
+
+              if [ "$attempt" -eq 3 ]; then
+                echo "Push was rejected three times because main kept changing."
+                exit 1
+              fi
+
+              sleep $((attempt * 5))
+            done
           fi
+
+      - name: Build Pages directory from latest main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
+          python scripts/build_site.py
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
