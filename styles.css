@@ -148,7 +148,14 @@ kbd { position: absolute; right: 11px; display: inline-grid; place-items: center
 .legend-marker.square { border: 2px solid var(--navy-2); background: var(--surface); }
 .timeline-status { min-height: 0; padding: 0 22px; color: var(--muted); font-size: 0.82rem; }
 .timeline-status:not(:empty) { padding-top: 12px; padding-bottom: 2px; }
-.timeline-scroll { position: relative; max-height: min(69vh, 870px); overflow: auto; overscroll-behavior: contain; scrollbar-color: var(--line-strong) transparent; }
+.timeline-scroll {
+  position: relative;
+  max-height: none;
+  overflow-x: auto;
+  overflow-y: visible;
+  overscroll-behavior-x: contain;
+  scrollbar-color: var(--line-strong) transparent;
+}
 .timeline-scroll:focus-visible { outline: 3px solid rgba(239, 106, 75, 0.2); outline-offset: -3px; }
 .timeline-table { position: relative; min-width: 100%; width: max-content; }
 .timeline-header, .conference-row { display: grid; grid-template-columns: var(--label-width) var(--timeline-width); min-width: calc(var(--label-width) + var(--timeline-width)); }
