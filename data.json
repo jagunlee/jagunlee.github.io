@@ -349,10 +349,10 @@
           "notification": "2026-07-03",
           "conferenceStart": "2026-11-08",
           "conferenceEnd": "2026-11-11",
-          "source": "https://focs.computer.org/2026/",
+          "source": "https://focs.computer.org/2026/call-for-papers-2/",
           "location": "New York City, New York, U.S.",
           "sourceType": "official",
-          "officialSource": "https://focs.computer.org/2026/"
+          "officialSource": "https://focs.computer.org/2026/call-for-papers-2/"
         },
         {
           "year": 2027,
@@ -366,10 +366,10 @@
             "notification",
             "submission"
           ],
-          "source": "https://www.computer.org/csdl/proceedings/focs/2025/2dXXInJ717i",
+          "source": "https://www.computer.org/csdl/proceedings/focs/2027/2dXXInJ717i",
           "location": "미정",
           "sourceType": "official",
-          "officialSource": "https://www.computer.org/csdl/proceedings/focs/2025/2dXXInJ717i"
+          "officialSource": "https://www.computer.org/csdl/proceedings/focs/2027/2dXXInJ717i"
         }
       ]
     },
@@ -392,18 +392,15 @@
         },
         {
           "year": 2027,
-          "submission": "2026-02-01",
+          "submission": "2026-03-31",
           "notification": "2026-02-01",
-          "cameraReady": "2027-03-31",
+          "cameraReady": "2026-03-31",
           "conferenceStart": "2027-06-22",
           "conferenceEnd": "2027-06-22",
-          "estimated": [
-            "cameraReady"
-          ],
-          "source": "https://acm-stoc.org/stoc2026/",
+          "source": "https://acm-stoc.org/stoc2026/stoc2026-cfp.html",
           "location": "미정",
           "sourceType": "official",
-          "officialSource": "https://acm-stoc.org/stoc2026/"
+          "officialSource": "https://acm-stoc.org/stoc2026/stoc2026-cfp.html"
         },
         {
           "year": 2028,
@@ -411,9 +408,11 @@
           "notification": "2028-06-22",
           "conferenceStart": "2028-06-22",
           "conferenceEnd": "2028-06-22",
-          "source": "https://acm-stoc.org/stoc2026/",
+          "source": "https://acm-stoc.org/stoc2026/stoc2026-cfp.html",
           "sourceType": "official",
-          "officialSource": "https://acm-stoc.org/stoc2026/"
+          "officialSource": "https://acm-stoc.org/stoc2026/stoc2026-cfp.html",
+          "submission": "2028-06-22",
+          "cameraReady": "2028-06-22"
         }
       ]
     },
