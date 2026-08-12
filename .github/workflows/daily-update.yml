@@ -1,4 +1,4 @@
-name: Daily CFP update and Pages deploy
+name: Daily CFP update
 
 on:
   schedule:
@@ -8,21 +8,15 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
-# Prevent two CFP updater runs from writing to main at the same time.
 concurrency:
   group: cfp-update-main
   cancel-in-progress: false
 
 jobs:
-  update-and-deploy:
+  update:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Check out repository
@@ -37,22 +31,6 @@ jobs:
           python-version: "3.12"
           cache: pip
 
-      - name: Diagnose outbound network and DNS
-        shell: bash
-        run: |
-          set +e
-          echo "## DNS checks"
-          for host in github.com pypi.org cccg.ca www.cccg.ca wikicfp.com www.wikicfp.com; do
-            echo "--- $host"
-            getent ahosts "$host" | head -n 3 || echo "DNS lookup failed"
-          done
-          echo "## HTTP checks"
-          for url in https://github.com https://pypi.org https://cccg.ca http://wikicfp.com/cfp/; do
-            echo "--- $url"
-            curl --ipv4 --location --head --silent --show-error \
-              --connect-timeout 8 --max-time 15 "$url" | head -n 8 || true
-          done
-
       - name: Install updater dependencies
         run: pip install -r requirements.txt
 
@@ -64,14 +42,16 @@ jobs:
 
       - name: Add report to workflow summary
         if: always()
+        shell: bash
         run: |
           echo '## Daily CFP update' >> "$GITHUB_STEP_SUMMARY"
-          echo '```json' >> "$GITHUB_STEP_SUMMARY"
-          cat .update-report.json >> "$GITHUB_STEP_SUMMARY" || true
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Rebuild portable HTML
-        run: python scripts/build_single_html.py
+          if [ -f .update-report.json ]; then
+            echo '```json' >> "$GITHUB_STEP_SUMMARY"
+            cat .update-report.json >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'No update report was generated.' >> "$GITHUB_STEP_SUMMARY"
+          fi
 
       - name: Commit and push verified changes
         shell: bash
@@ -79,59 +59,40 @@ jobs:
           set -euo pipefail
 
           rm -f .update-report.json update-output.json
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data.json data.js cg-conference-timeline.html
+          # cfp.html itself is static; only the generated data needs daily commits.
+          git add data.json data.js
 
           if git diff --cached --quiet; then
             echo "No conference-data changes."
-          else
-            git commit -m "chore: update conference dates"
-
-            # main may have changed while the crawler was running. Rebase the
-            # generated commit onto the newest remote main and retry safely.
-            for attempt in 1 2 3; do
-              echo "Push attempt ${attempt}/3"
-              git fetch origin main
-
-              if ! git rebase origin/main; then
-                git rebase --abort || true
-                echo "Rebase conflict. A remote commit changed the same generated files."
-                echo "Resolve the conflict manually, then run this workflow again."
-                exit 1
-              fi
-
-              if git push origin HEAD:main; then
-                echo "Conference updates pushed successfully."
-                break
-              fi
-
-              if [ "$attempt" -eq 3 ]; then
-                echo "Push was rejected three times because main kept changing."
-                exit 1
-              fi
-
-              sleep $((attempt * 5))
-            done
+            exit 0
           fi
 
-      - name: Build Pages directory from latest main
-        shell: bash
-        run: |
-          set -euo pipefail
-          git fetch origin main
-          git reset --hard origin/main
-          python scripts/build_site.py
+          git commit -m "chore: update conference dates"
 
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+          for attempt in 1 2 3; do
+            echo "Push attempt ${attempt}/3"
+            git fetch origin main
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "Rebase conflict: main changed the same generated data files."
+              echo "Resolve the conflicting change manually, then run this workflow again."
+              exit 1
+            fi
 
-      - name: Deploy GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+            if git push origin HEAD:main; then
+              echo "Conference updates pushed successfully."
+              exit 0
+            fi
+
+            if [ "$attempt" -eq 3 ]; then
+              echo "Push was rejected three times because main kept changing."
+              exit 1
+            fi
+
+            sleep $((attempt * 5))
+          done
