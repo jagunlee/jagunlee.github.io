@@ -1,5 +1,5 @@
 window.CONFERENCE_DATA = {
-  "updated": "2026-07-22",
+  "updated": "2026-08-12",
   "sourceNote": "WikiCFP를 우선 확인하고, 검색되지 않는 학회는 공식 홈페이지를 탐색해 자동 갱신합니다. 확인되지 않은 값은 기존 데이터 또는 추정값으로 유지됩니다.",
   "conferences": [
     {
@@ -31,10 +31,10 @@ window.CONFERENCE_DATA = {
             "conferenceStart",
             "submission"
           ],
-          "source": "https://sites.google.com/view/cccg-2026/important-dates",
+          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1729904364:1786502393594535",
           "location": "& Travel",
           "sourceType": "official",
-          "officialSource": "https://sites.google.com/view/cccg-2026/important-dates"
+          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1729904364:1786502393594535"
         },
         {
           "year": 2028,
@@ -43,9 +43,9 @@ window.CONFERENCE_DATA = {
           "cameraReady": "2028-08-12",
           "conferenceStart": "2028-08-12",
           "conferenceEnd": "2028-08-12",
-          "source": "https://sites.google.com/view/cccg-2026/important-dates",
+          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S51726295:1786502394033196",
           "sourceType": "official",
-          "officialSource": "https://sites.google.com/view/cccg-2026/important-dates"
+          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S51726295:1786502394033196"
         }
       ]
     },
@@ -320,8 +320,10 @@ window.CONFERENCE_DATA = {
           "cameraReady": "2026-04-06",
           "conferenceStart": "2026-06-08",
           "conferenceEnd": "2026-06-12",
-          "source": "https://iwoca2026.limos.fr/",
-          "location": "Université Clermont Auvergne, Clermont-Ferrand, France"
+          "source": "https://iwoca2026.limos.fr/cfp.php",
+          "location": "Université Clermont Auvergne, Clermont-Ferrand, France",
+          "sourceType": "official",
+          "officialSource": "https://iwoca2026.limos.fr/cfp.php"
         },
         {
           "year": 2027,
