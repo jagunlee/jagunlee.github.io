@@ -1,5 +1,5 @@
 window.CONFERENCE_DATA = {
-  "updated": "2026-08-29",
+  "updated": "2026-08-30",
   "sourceNote": "WikiCFP를 우선 확인하고, 검색되지 않는 학회는 공식 홈페이지를 탐색해 자동 갱신합니다. 확인되지 않은 값은 기존 데이터 또는 추정값으로 유지됩니다.",
   "conferences": [
     {
@@ -31,10 +31,10 @@ window.CONFERENCE_DATA = {
             "conferenceStart",
             "submission"
           ],
-          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S624314185:1787986769630034",
+          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-821835112:1788067102067890",
           "location": "& Travel",
           "sourceType": "official",
-          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S624314185:1787986769630034"
+          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-821835112:1788067102067890"
         },
         {
           "year": 2028,
@@ -43,9 +43,9 @@ window.CONFERENCE_DATA = {
           "cameraReady": "2028-08-12",
           "conferenceStart": "2028-08-12",
           "conferenceEnd": "2028-08-12",
-          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-516263436:1787986769847015",
+          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1429714918:1788067102331498",
           "sourceType": "official",
-          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-516263436:1787986769847015"
+          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1429714918:1788067102331498"
         }
       ]
     },
