@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-07",
+  "updated": "2026-09-08",
   "sourceNote": "WikiCFP를 우선 확인하고, 검색되지 않는 학회는 공식 홈페이지를 탐색해 자동 갱신합니다. 확인되지 않은 값은 기존 데이터 또는 추정값으로 유지됩니다.",
   "conferences": [
     {
@@ -31,10 +31,10 @@
             "conferenceStart",
             "submission"
           ],
-          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S490490739:1788755388186330",
+          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2144239695:1788841680162402",
           "location": "& Travel",
           "sourceType": "official",
-          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S490490739:1788755388186330"
+          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2144239695:1788841680162402"
         },
         {
           "year": 2028,
@@ -43,9 +43,9 @@
           "cameraReady": "2028-08-12",
           "conferenceStart": "2028-08-12",
           "conferenceEnd": "2028-08-12",
-          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S19701317:1788755388632078",
+          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S36287696:1788841680603755",
           "sourceType": "official",
-          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S19701317:1788755388632078"
+          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S36287696:1788841680603755"
         }
       ]
     },
@@ -399,10 +399,10 @@
           "cameraReady": "2026-03-31",
           "conferenceStart": "2027-06-22",
           "conferenceEnd": "2027-06-22",
-          "source": "https://acm-stoc.org/stoc2026/stoc2026-cfp.html",
+          "source": "https://acm-stoc.org/stoc2027/",
           "location": "미정",
           "sourceType": "official",
-          "officialSource": "https://acm-stoc.org/stoc2026/stoc2026-cfp.html"
+          "officialSource": "https://acm-stoc.org/stoc2027/"
         },
         {
           "year": 2028,
