@@ -1,5 +1,5 @@
 window.CONFERENCE_DATA = {
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "sourceNote": "WikiCFP를 우선 확인하고, 검색되지 않는 학회는 공식 홈페이지를 탐색해 자동 갱신합니다. 확인되지 않은 값은 기존 데이터 또는 추정값으로 유지됩니다.",
   "conferences": [
     {
@@ -31,10 +31,10 @@ window.CONFERENCE_DATA = {
             "conferenceStart",
             "submission"
           ],
-          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2062603445:1789879710400380",
+          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2130603927:1789966124530839",
           "location": "& Travel",
           "sourceType": "official",
-          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2062603445:1789879710400380"
+          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2130603927:1789966124530839"
         },
         {
           "year": 2028,
@@ -43,9 +43,9 @@ window.CONFERENCE_DATA = {
           "cameraReady": "2028-08-12",
           "conferenceStart": "2028-08-12",
           "conferenceEnd": "2028-08-12",
-          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S135789355:1789879710647124",
+          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-484369640:1789966124789615",
           "sourceType": "official",
-          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S135789355:1789879710647124"
+          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-484369640:1789966124789615"
         }
       ]
     },
@@ -288,10 +288,10 @@ window.CONFERENCE_DATA = {
           "cameraReady": "2025-11-24",
           "conferenceStart": "2026-03-04",
           "conferenceEnd": "2026-03-06",
-          "source": "https://mozart.diei.unipg.it/walcom2026/index.html",
+          "source": "http://www.walcom-conference.org/",
           "location": "University of Perugia, Perugia, Italy",
           "sourceType": "official",
-          "officialSource": "https://mozart.diei.unipg.it/walcom2026/index.html"
+          "officialSource": "http://www.walcom-conference.org/"
         },
         {
           "year": 2027,
