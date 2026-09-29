@@ -1,5 +1,5 @@
 window.CONFERENCE_DATA = {
-  "updated": "2026-09-28",
+  "updated": "2026-09-29",
   "sourceNote": "WikiCFP를 우선 확인하고, 검색되지 않는 학회는 공식 홈페이지를 탐색해 자동 갱신합니다. 확인되지 않은 값은 기존 데이터 또는 추정값으로 유지됩니다.",
   "conferences": [
     {
@@ -31,10 +31,10 @@ window.CONFERENCE_DATA = {
             "conferenceStart",
             "submission"
           ],
-          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1876701081:1790572570102544",
+          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S907007844:1790660268700020",
           "location": "& Travel",
           "sourceType": "official",
-          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1876701081:1790572570102544"
+          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S907007844:1790660268700020"
         },
         {
           "year": 2028,
@@ -43,9 +43,9 @@ window.CONFERENCE_DATA = {
           "cameraReady": "2028-08-12",
           "conferenceStart": "2028-08-12",
           "conferenceEnd": "2028-08-12",
-          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-416261728:1790572570413108",
+          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-15096300:1790660268941135",
           "sourceType": "official",
-          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-416261728:1790572570413108"
+          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-15096300:1790660268941135"
         }
       ]
     },
@@ -217,7 +217,7 @@ window.CONFERENCE_DATA = {
           "source": "https://www.algo-door.com/isaac2026/index.html",
           "location": "Jinxi Hotel, Hangzhou, China",
           "notification": "2026-09-07",
-          "cameraReady": "2026-12-06",
+          "cameraReady": "2026-09-25",
           "sourceType": "official",
           "officialSource": "https://www.algo-door.com/isaac2026/index.html"
         },
