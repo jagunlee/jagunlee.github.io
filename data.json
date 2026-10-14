@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-08",
+  "updated": "2026-10-14",
   "sourceNote": "WikiCFP를 우선 확인하고, 검색되지 않는 학회는 공식 홈페이지를 탐색해 자동 갱신합니다. 확인되지 않은 값은 기존 데이터 또는 추정값으로 유지됩니다.",
   "conferences": [
     {
@@ -31,10 +31,10 @@
             "conferenceStart",
             "submission"
           ],
-          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2144239695:1788841680162402",
+          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1728770209:1791953163266710",
           "location": "& Travel",
           "sourceType": "official",
-          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2144239695:1788841680162402"
+          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1728770209:1791953163266710"
         },
         {
           "year": 2028,
@@ -43,9 +43,9 @@
           "cameraReady": "2028-08-12",
           "conferenceStart": "2028-08-12",
           "conferenceEnd": "2028-08-12",
-          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S36287696:1788841680603755",
+          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-114798484:1791953163521133",
           "sourceType": "official",
-          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S36287696:1788841680603755"
+          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-114798484:1791953163521133"
         }
       ]
     },
@@ -217,7 +217,7 @@
           "source": "https://www.algo-door.com/isaac2026/index.html",
           "location": "Jinxi Hotel, Hangzhou, China",
           "notification": "2026-09-07",
-          "cameraReady": "2026-12-06",
+          "cameraReady": "2026-09-25",
           "sourceType": "official",
           "officialSource": "https://www.algo-door.com/isaac2026/index.html"
         },
@@ -288,10 +288,10 @@
           "cameraReady": "2025-11-24",
           "conferenceStart": "2026-03-04",
           "conferenceEnd": "2026-03-06",
-          "source": "https://mozart.diei.unipg.it/walcom2026/index.html",
+          "source": "http://www.walcom-conference.org/summary.php",
           "location": "University of Perugia, Perugia, Italy",
           "sourceType": "official",
-          "officialSource": "https://mozart.diei.unipg.it/walcom2026/index.html"
+          "officialSource": "http://www.walcom-conference.org/summary.php"
         },
         {
           "year": 2027,
@@ -394,15 +394,15 @@
         },
         {
           "year": 2027,
-          "submission": "2026-03-31",
-          "notification": "2026-02-01",
-          "cameraReady": "2026-03-31",
+          "submission": "2026-11-02",
+          "notification": "2026-11-02",
+          "cameraReady": "2026-11-02",
           "conferenceStart": "2027-06-22",
           "conferenceEnd": "2027-06-22",
-          "source": "https://acm-stoc.org/stoc2027/",
+          "source": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html",
           "location": "미정",
           "sourceType": "official",
-          "officialSource": "https://acm-stoc.org/stoc2027/"
+          "officialSource": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html"
         },
         {
           "year": 2028,
