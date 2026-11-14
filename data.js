@@ -1,5 +1,5 @@
 window.CONFERENCE_DATA = {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "sourceNote": "WikiCFP를 우선 확인하고, 검색되지 않는 학회는 공식 홈페이지를 탐색해 자동 갱신합니다. 확인되지 않은 값은 기존 데이터 또는 추정값으로 유지됩니다.",
   "conferences": [
     {
@@ -31,10 +31,10 @@ window.CONFERENCE_DATA = {
             "conferenceStart",
             "submission"
           ],
-          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1310305302:1794551509942168",
+          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1058198064:1794636592995048",
           "location": "& Travel",
           "sourceType": "official",
-          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1310305302:1794551509942168"
+          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2027/important-dates&followup=https://sites.google.com/view/cccg-2027/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1058198064:1794636592995048"
         },
         {
           "year": 2028,
@@ -43,9 +43,9 @@ window.CONFERENCE_DATA = {
           "cameraReady": "2028-08-12",
           "conferenceStart": "2028-08-12",
           "conferenceEnd": "2028-08-12",
-          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S2050198052:1794551510422679",
+          "source": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1294767431:1794636593281882",
           "sourceType": "official",
-          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S2050198052:1794551510422679"
+          "officialSource": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/view/cccg-2028/important-dates&followup=https://sites.google.com/view/cccg-2028/important-dates&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1294767431:1794636593281882"
         }
       ]
     },
@@ -86,10 +86,10 @@ window.CONFERENCE_DATA = {
           "cameraReady": "2026-04-17",
           "conferenceStart": "2026-06-17",
           "conferenceEnd": "2026-06-19",
-          "source": "https://swat-symposium.org/",
+          "source": "https://swat2026.compute.dtu.dk/",
           "location": "IDA Conference (Ingeniørernes Hus), Copenhagen, Denmark",
           "sourceType": "official",
-          "officialSource": "https://swat-symposium.org/"
+          "officialSource": "https://swat2026.compute.dtu.dk/"
         }
       ]
     },
@@ -283,15 +283,15 @@ window.CONFERENCE_DATA = {
       "editions": [
         {
           "year": 2026,
-          "submission": "2025-09-21",
-          "notification": "2025-11-07",
-          "cameraReady": "2025-11-24",
+          "submission": "2026-09-21",
+          "notification": "2026-11-09",
+          "cameraReady": "2026-11-28",
           "conferenceStart": "2026-03-04",
           "conferenceEnd": "2026-03-06",
-          "source": "http://www.walcom-conference.org/summary.php",
+          "source": "https://sites.google.com/gapps.ntnu.edu.tw/walcom2027",
           "location": "University of Perugia, Perugia, Italy",
           "sourceType": "official",
-          "officialSource": "http://www.walcom-conference.org/summary.php"
+          "officialSource": "https://sites.google.com/gapps.ntnu.edu.tw/walcom2027"
         },
         {
           "year": 2027,
